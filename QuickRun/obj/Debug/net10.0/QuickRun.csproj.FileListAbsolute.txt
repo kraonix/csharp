@@ -1,0 +1,14 @@
+C:\Users\SACHIN\Desktop\.NET\QuickRun\bin\Debug\net10.0\QuickRun.exe
+C:\Users\SACHIN\Desktop\.NET\QuickRun\bin\Debug\net10.0\QuickRun.deps.json
+C:\Users\SACHIN\Desktop\.NET\QuickRun\bin\Debug\net10.0\QuickRun.runtimeconfig.json
+C:\Users\SACHIN\Desktop\.NET\QuickRun\bin\Debug\net10.0\QuickRun.dll
+C:\Users\SACHIN\Desktop\.NET\QuickRun\bin\Debug\net10.0\QuickRun.pdb
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\QuickRun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\QuickRun.AssemblyInfoInputs.cache
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\QuickRun.AssemblyInfo.cs
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\QuickRun.csproj.CoreCompileInputs.cache
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\QuickRun.dll
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\refint\QuickRun.dll
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\QuickRun.pdb
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\QuickRun.genruntimeconfig.cache
+C:\Users\SACHIN\Desktop\.NET\QuickRun\obj\Debug\net10.0\ref\QuickRun.dll

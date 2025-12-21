@@ -6,6 +6,7 @@
     static void Main()
     {
         int choice;
+        
         do
         {
             // Display menu

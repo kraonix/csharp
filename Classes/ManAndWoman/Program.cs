@@ -10,13 +10,12 @@ public class Person
     public string Name;
     public int Age;
 
-    public Person()
+    // Constructors
+    private Person() // Default Constructor
     {
-        ID = 0;
-        Name = string.Empty;
-        Age = 0;
+
     }
-    public Person(int id, string name, int age)
+    public Person(int id, string name, int age) // Parameterized Constructor
     {
         ID = id;
         Name = name;
@@ -61,26 +60,26 @@ public class Program
     public static void Main(string[] args)
     {
         //Main Class
-        Program p = new Program();
+        Program p = new Program(); // Creating object of Main class
 
         Person person = new Person();
 
-        Man man = new Man(2, "Sahil", 19, "Cricket");
-        Woman woman = new Woman(3, "Avni", 20, "School");
+        Man man = new Man(2, "Sahil", 19, "Cricket"); // Creating object of Man
+        Woman woman = new Woman(3, "Avni", 20, "School"); // Creating object of Woman
 
         Console.WriteLine();
         Console.WriteLine(p.PersonDetails(man));
         Console.WriteLine(p.PersonDetails(woman));
     }
 
-    public string PersonDetails(Person person)
+    public string PersonDetails(Person person) // Method to display details of Person
     {
-        if(person is Man)
+        if(person is Man) // Checking the type of object
         {
             Man man = (Man) person;
             return $"Name : {person.Name} \nAge : {person.Age} \nPlaying : {man.Playing} \n";
 
-        }else if(person is Woman)
+        }else if(person is Woman) // Checking the type of objects
         {
             Woman woman = (Woman) person;
             return $"Name : {person.Name} \nAge : {person.Age} \nManaging: {woman.Managing} \n";

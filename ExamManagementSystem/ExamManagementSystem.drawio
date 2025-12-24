@@ -1,0 +1,59 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.9">
+  <diagram name="Page-1" id="cA-XuvTEowj4YAGB3qdO">
+    <mxGraphModel dx="1042" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-16" edge="1" parent="1" source="9Lmp1xNXGxFp9RTNT52g-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="9Lmp1xNXGxFp9RTNT52g-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="CommonDetails&lt;br&gt;&lt;br&gt;*ID, Name, RollID" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="EmployeeDetail&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;*EmployeeID&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Students&lt;br&gt;&lt;br&gt;*CourseID" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-12" edge="1" parent="1" source="9Lmp1xNXGxFp9RTNT52g-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="9Lmp1xNXGxFp9RTNT52g-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="HOD" vertex="1">
+          <mxGeometry height="60" width="120" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-7" edge="1" parent="1" source="9Lmp1xNXGxFp9RTNT52g-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="9Lmp1xNXGxFp9RTNT52g-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Examiner" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-13" edge="1" parent="1" source="9Lmp1xNXGxFp9RTNT52g-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.337;entryY=0.957;entryDx=0;entryDy=0;entryPerimeter=0;" target="9Lmp1xNXGxFp9RTNT52g-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="200" />
+              <mxPoint x="320" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-14" edge="1" parent="1" source="9Lmp1xNXGxFp9RTNT52g-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.677;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" target="9Lmp1xNXGxFp9RTNT52g-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="200" />
+              <mxPoint x="361" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Roles&lt;br&gt;&lt;br&gt;*RoleDetails" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-18" edge="1" parent="1" source="9Lmp1xNXGxFp9RTNT52g-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="9Lmp1xNXGxFp9RTNT52g-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9Lmp1xNXGxFp9RTNT52g-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RoleAssignment" vertex="1">
+          <mxGeometry height="60" width="120" x="640" y="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

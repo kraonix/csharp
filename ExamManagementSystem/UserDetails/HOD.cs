@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-
 namespace UserDetails
 {
     public class HODDetails : CommonUser
@@ -35,6 +33,11 @@ namespace UserDetails
                 {
                     Console.WriteLine("\nOption 2 Selected\n");
                     RemoveExaminerFromCourse(students);
+                }
+                else if( choice == 3)
+                {
+                    Console.WriteLine("\nOption 2 Selected\n");
+                    ViewExaminer(examiners, students);
                 }
                 else if (choice == 0)
                 {
@@ -156,6 +159,17 @@ namespace UserDetails
             }
 
             Console.WriteLine($"Examiner removed from {removedCount} student(s)");
+        }
+
+        public void ViewExaminer(ExaminerDetails[] e, StudentDetails[] s)
+        {
+            if(s.ExaminerID != 0)
+            {
+                foreach(var temp in s)
+                {
+                    Console.WriteLine($"");
+                }
+            }
         }
     }
 }

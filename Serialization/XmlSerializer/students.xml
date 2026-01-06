@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <Student>
+      <Name>Sachin</Name>
+      <Subjects>
+        <string>Maths</string>
+        <string>Physics</string>
+        <string>CS</string>
+      </Subjects>
+      <Marks>
+        <int>90</int>
+        <int>90</int>
+        <int>90</int>
+      </Marks>
+    </Student>
+    <Student>
+      <Name>Sahil</Name>
+      <Subjects>
+        <string>Maths</string>
+        <string>Chemistry</string>
+        <string>CS</string>
+      </Subjects>
+      <Marks>
+        <int>88</int>
+        <int>92</int>
+        <int>91</int>
+      </Marks>
+    </Student>
+  </Items>
+</Students>~

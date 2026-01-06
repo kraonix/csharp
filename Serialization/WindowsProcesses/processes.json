@@ -1,0 +1,1527 @@
+[
+  {
+    "Id": 0,
+    "Name": "Idle",
+    "MemoryKB": 8
+  },
+  {
+    "Id": 4,
+    "Name": "System",
+    "MemoryKB": 144
+  },
+  {
+    "Id": 236,
+    "Name": "Secure System",
+    "MemoryKB": 66488
+  },
+  {
+    "Id": 280,
+    "Name": "Registry",
+    "MemoryKB": 37500
+  },
+  {
+    "Id": 844,
+    "Name": "smss",
+    "MemoryKB": 412
+  },
+  {
+    "Id": 1296,
+    "Name": "csrss",
+    "MemoryKB": 2428
+  },
+  {
+    "Id": 1512,
+    "Name": "wininit",
+    "MemoryKB": 712
+  },
+  {
+    "Id": 1584,
+    "Name": "services",
+    "MemoryKB": 7688
+  },
+  {
+    "Id": 1592,
+    "Name": "LsaIso",
+    "MemoryKB": 168
+  },
+  {
+    "Id": 1612,
+    "Name": "lsass",
+    "MemoryKB": 19348
+  },
+  {
+    "Id": 1740,
+    "Name": "fontdrvhost",
+    "MemoryKB": 764
+  },
+  {
+    "Id": 1752,
+    "Name": "svchost",
+    "MemoryKB": 28160
+  },
+  {
+    "Id": 1844,
+    "Name": "svchost",
+    "MemoryKB": 14720
+  },
+  {
+    "Id": 1892,
+    "Name": "svchost",
+    "MemoryKB": 4484
+  },
+  {
+    "Id": 1624,
+    "Name": "svchost",
+    "MemoryKB": 976
+  },
+  {
+    "Id": 1580,
+    "Name": "svchost",
+    "MemoryKB": 4284
+  },
+  {
+    "Id": 1504,
+    "Name": "svchost",
+    "MemoryKB": 9868
+  },
+  {
+    "Id": 2188,
+    "Name": "svchost",
+    "MemoryKB": 4208
+  },
+  {
+    "Id": 2276,
+    "Name": "svchost",
+    "MemoryKB": 5732
+  },
+  {
+    "Id": 2284,
+    "Name": "svchost",
+    "MemoryKB": 6016
+  },
+  {
+    "Id": 2292,
+    "Name": "svchost",
+    "MemoryKB": 5548
+  },
+  {
+    "Id": 2368,
+    "Name": "svchost",
+    "MemoryKB": 9608
+  },
+  {
+    "Id": 2444,
+    "Name": "svchost",
+    "MemoryKB": 7920
+  },
+  {
+    "Id": 2496,
+    "Name": "svchost",
+    "MemoryKB": 2304
+  },
+  {
+    "Id": 2508,
+    "Name": "svchost",
+    "MemoryKB": 1504
+  },
+  {
+    "Id": 2516,
+    "Name": "svchost",
+    "MemoryKB": 4456
+  },
+  {
+    "Id": 2576,
+    "Name": "svchost",
+    "MemoryKB": 16252
+  },
+  {
+    "Id": 2728,
+    "Name": "svchost",
+    "MemoryKB": 5580
+  },
+  {
+    "Id": 2804,
+    "Name": "svchost",
+    "MemoryKB": 7148
+  },
+  {
+    "Id": 2888,
+    "Name": "svchost",
+    "MemoryKB": 8260
+  },
+  {
+    "Id": 3020,
+    "Name": "svchost",
+    "MemoryKB": 2264
+  },
+  {
+    "Id": 3196,
+    "Name": "svchost",
+    "MemoryKB": 2728
+  },
+  {
+    "Id": 3244,
+    "Name": "OmenCap",
+    "MemoryKB": 3168
+  },
+  {
+    "Id": 3336,
+    "Name": "NVDisplay.Container",
+    "MemoryKB": 17524
+  },
+  {
+    "Id": 3424,
+    "Name": "amdfendrsr",
+    "MemoryKB": 736
+  },
+  {
+    "Id": 3432,
+    "Name": "atiesrxx",
+    "MemoryKB": 2372
+  },
+  {
+    "Id": 3440,
+    "Name": "svchost",
+    "MemoryKB": 15832
+  },
+  {
+    "Id": 3700,
+    "Name": "svchost",
+    "MemoryKB": 1524
+  },
+  {
+    "Id": 3708,
+    "Name": "svchost",
+    "MemoryKB": 7056
+  },
+  {
+    "Id": 3716,
+    "Name": "svchost",
+    "MemoryKB": 1764
+  },
+  {
+    "Id": 3812,
+    "Name": "Memory Compression",
+    "MemoryKB": 947220
+  },
+  {
+    "Id": 3856,
+    "Name": "svchost",
+    "MemoryKB": 2384
+  },
+  {
+    "Id": 3924,
+    "Name": "TouchpointAnalyticsClientService",
+    "MemoryKB": 22048
+  },
+  {
+    "Id": 3932,
+    "Name": "svchost",
+    "MemoryKB": 2008
+  },
+  {
+    "Id": 3940,
+    "Name": "NetworkCap",
+    "MemoryKB": 3872
+  },
+  {
+    "Id": 3948,
+    "Name": "SysInfoCap",
+    "MemoryKB": 14496
+  },
+  {
+    "Id": 3956,
+    "Name": "svchost",
+    "MemoryKB": 3272
+  },
+  {
+    "Id": 3964,
+    "Name": "AppHelperCap",
+    "MemoryKB": 14544
+  },
+  {
+    "Id": 3972,
+    "Name": "DiagsCap",
+    "MemoryKB": 4200
+  },
+  {
+    "Id": 3504,
+    "Name": "svchost",
+    "MemoryKB": 13636
+  },
+  {
+    "Id": 3608,
+    "Name": "svchost",
+    "MemoryKB": 9544
+  },
+  {
+    "Id": 3848,
+    "Name": "svchost",
+    "MemoryKB": 3888
+  },
+  {
+    "Id": 4364,
+    "Name": "svchost",
+    "MemoryKB": 24108
+  },
+  {
+    "Id": 4580,
+    "Name": "svchost",
+    "MemoryKB": 19680
+  },
+  {
+    "Id": 4584,
+    "Name": "svchost",
+    "MemoryKB": 20208
+  },
+  {
+    "Id": 4892,
+    "Name": "svchost",
+    "MemoryKB": 2988
+  },
+  {
+    "Id": 5228,
+    "Name": "unsecapp",
+    "MemoryKB": 2684
+  },
+  {
+    "Id": 5384,
+    "Name": "WmiPrvSE",
+    "MemoryKB": 64716
+  },
+  {
+    "Id": 5608,
+    "Name": "svchost",
+    "MemoryKB": 3616
+  },
+  {
+    "Id": 5636,
+    "Name": "svchost",
+    "MemoryKB": 8312
+  },
+  {
+    "Id": 5732,
+    "Name": "svchost",
+    "MemoryKB": 4184
+  },
+  {
+    "Id": 5872,
+    "Name": "svchost",
+    "MemoryKB": 11068
+  },
+  {
+    "Id": 5936,
+    "Name": "svchost",
+    "MemoryKB": 2848
+  },
+  {
+    "Id": 6092,
+    "Name": "spoolsv",
+    "MemoryKB": 5532
+  },
+  {
+    "Id": 5604,
+    "Name": "svchost",
+    "MemoryKB": 2880
+  },
+  {
+    "Id": 6192,
+    "Name": "AmdPpkgSvc",
+    "MemoryKB": 164
+  },
+  {
+    "Id": 6208,
+    "Name": "svchost",
+    "MemoryKB": 1164
+  },
+  {
+    "Id": 6224,
+    "Name": "svchost",
+    "MemoryKB": 2096
+  },
+  {
+    "Id": 6240,
+    "Name": "HPCommRecovery",
+    "MemoryKB": 8384
+  },
+  {
+    "Id": 6292,
+    "Name": "svchost",
+    "MemoryKB": 7036
+  },
+  {
+    "Id": 6300,
+    "Name": "svchost",
+    "MemoryKB": 2380
+  },
+  {
+    "Id": 6308,
+    "Name": "ETDService",
+    "MemoryKB": 596
+  },
+  {
+    "Id": 6316,
+    "Name": "svchost",
+    "MemoryKB": 1788
+  },
+  {
+    "Id": 6324,
+    "Name": "HPPrintScanDoctorService",
+    "MemoryKB": 11328
+  },
+  {
+    "Id": 6344,
+    "Name": "svchost",
+    "MemoryKB": 42644
+  },
+  {
+    "Id": 6376,
+    "Name": "DtsApo4Service",
+    "MemoryKB": 1776
+  },
+  {
+    "Id": 6392,
+    "Name": "GooglePlayGamesServices",
+    "MemoryKB": 49460
+  },
+  {
+    "Id": 6408,
+    "Name": "OfficeClickToRun",
+    "MemoryKB": 17724
+  },
+  {
+    "Id": 6428,
+    "Name": "svchost",
+    "MemoryKB": 7088
+  },
+  {
+    "Id": 6436,
+    "Name": "svchost",
+    "MemoryKB": 28960
+  },
+  {
+    "Id": 6444,
+    "Name": "svchost",
+    "MemoryKB": 2924
+  },
+  {
+    "Id": 6464,
+    "Name": "svchost",
+    "MemoryKB": 2720
+  },
+  {
+    "Id": 6472,
+    "Name": "RtkAudUService64",
+    "MemoryKB": 4520
+  },
+  {
+    "Id": 6480,
+    "Name": "svchost",
+    "MemoryKB": 748
+  },
+  {
+    "Id": 6488,
+    "Name": "nvcontainer",
+    "MemoryKB": 11284
+  },
+  {
+    "Id": 6496,
+    "Name": "wslservice",
+    "MemoryKB": 7284
+  },
+  {
+    "Id": 6504,
+    "Name": "svchost",
+    "MemoryKB": 14476
+  },
+  {
+    "Id": 6512,
+    "Name": "svchost",
+    "MemoryKB": 9132
+  },
+  {
+    "Id": 6528,
+    "Name": "sqlwriter",
+    "MemoryKB": 1196
+  },
+  {
+    "Id": 6536,
+    "Name": "MsMpEng",
+    "MemoryKB": 230192
+  },
+  {
+    "Id": 6544,
+    "Name": "mysqld",
+    "MemoryKB": 3044
+  },
+  {
+    "Id": 6552,
+    "Name": "MpDefenderCoreService",
+    "MemoryKB": 12288
+  },
+  {
+    "Id": 6564,
+    "Name": "mysqld",
+    "MemoryKB": 408
+  },
+  {
+    "Id": 7068,
+    "Name": "dasHost",
+    "MemoryKB": 14536
+  },
+  {
+    "Id": 6856,
+    "Name": "svchost",
+    "MemoryKB": 5320
+  },
+  {
+    "Id": 7772,
+    "Name": "mysqld",
+    "MemoryKB": 2372
+  },
+  {
+    "Id": 7932,
+    "Name": "conhost",
+    "MemoryKB": 1068
+  },
+  {
+    "Id": 7944,
+    "Name": "svchost",
+    "MemoryKB": 1656
+  },
+  {
+    "Id": 7588,
+    "Name": "svchost",
+    "MemoryKB": 1132
+  },
+  {
+    "Id": 8804,
+    "Name": "crashpad_handler",
+    "MemoryKB": 592
+  },
+  {
+    "Id": 8744,
+    "Name": "svchost",
+    "MemoryKB": 3760
+  },
+  {
+    "Id": 10236,
+    "Name": "svchost",
+    "MemoryKB": 15916
+  },
+  {
+    "Id": 10200,
+    "Name": "svchost",
+    "MemoryKB": 22120
+  },
+  {
+    "Id": 9860,
+    "Name": "gamingservices",
+    "MemoryKB": 19408
+  },
+  {
+    "Id": 9900,
+    "Name": "gamingservicesnet",
+    "MemoryKB": 2808
+  },
+  {
+    "Id": 10432,
+    "Name": "wlanext",
+    "MemoryKB": 1296
+  },
+  {
+    "Id": 10952,
+    "Name": "svchost",
+    "MemoryKB": 20616
+  },
+  {
+    "Id": 11060,
+    "Name": "AUEPMaster",
+    "MemoryKB": 3600
+  },
+  {
+    "Id": 11092,
+    "Name": "AggregatorHost",
+    "MemoryKB": 6336
+  },
+  {
+    "Id": 6152,
+    "Name": "svchost",
+    "MemoryKB": 15188
+  },
+  {
+    "Id": 9548,
+    "Name": "svchost",
+    "MemoryKB": 4300
+  },
+  {
+    "Id": 11316,
+    "Name": "NgcIso",
+    "MemoryKB": 676
+  },
+  {
+    "Id": 11708,
+    "Name": "svchost",
+    "MemoryKB": 7744
+  },
+  {
+    "Id": 11904,
+    "Name": "svchost",
+    "MemoryKB": 5268
+  },
+  {
+    "Id": 12076,
+    "Name": "svchost",
+    "MemoryKB": 4628
+  },
+  {
+    "Id": 12108,
+    "Name": "svchost",
+    "MemoryKB": 15228
+  },
+  {
+    "Id": 12116,
+    "Name": "SearchIndexer",
+    "MemoryKB": 27072
+  },
+  {
+    "Id": 12688,
+    "Name": "svchost",
+    "MemoryKB": 18712
+  },
+  {
+    "Id": 11696,
+    "Name": "svchost",
+    "MemoryKB": 1012
+  },
+  {
+    "Id": 15008,
+    "Name": "svchost",
+    "MemoryKB": 3804
+  },
+  {
+    "Id": 15224,
+    "Name": "svchost",
+    "MemoryKB": 7816
+  },
+  {
+    "Id": 16056,
+    "Name": "svchost",
+    "MemoryKB": 13960
+  },
+  {
+    "Id": 16116,
+    "Name": "BraveCrashHandler",
+    "MemoryKB": 1592
+  },
+  {
+    "Id": 16192,
+    "Name": "BraveCrashHandler64",
+    "MemoryKB": 344
+  },
+  {
+    "Id": 18008,
+    "Name": "svchost",
+    "MemoryKB": 3620
+  },
+  {
+    "Id": 18040,
+    "Name": "NisSrv",
+    "MemoryKB": 3876
+  },
+  {
+    "Id": 18528,
+    "Name": "dasHost",
+    "MemoryKB": 6224
+  },
+  {
+    "Id": 22912,
+    "Name": "AUEPDU",
+    "MemoryKB": 712
+  },
+  {
+    "Id": 23200,
+    "Name": "svchost",
+    "MemoryKB": 9564
+  },
+  {
+    "Id": 23360,
+    "Name": "svchost",
+    "MemoryKB": 3656
+  },
+  {
+    "Id": 23464,
+    "Name": "sqlservr",
+    "MemoryKB": 83972
+  },
+  {
+    "Id": 23560,
+    "Name": "sqlservr",
+    "MemoryKB": 84340
+  },
+  {
+    "Id": 24056,
+    "Name": "sqlceip",
+    "MemoryKB": 18680
+  },
+  {
+    "Id": 24120,
+    "Name": "sqlceip",
+    "MemoryKB": 20296
+  },
+  {
+    "Id": 24332,
+    "Name": "svchost",
+    "MemoryKB": 8440
+  },
+  {
+    "Id": 24460,
+    "Name": "svchost",
+    "MemoryKB": 10776
+  },
+  {
+    "Id": 15024,
+    "Name": "svchost",
+    "MemoryKB": 4144
+  },
+  {
+    "Id": 20552,
+    "Name": "svchost",
+    "MemoryKB": 10268
+  },
+  {
+    "Id": 18996,
+    "Name": "svchost",
+    "MemoryKB": 1292
+  },
+  {
+    "Id": 7212,
+    "Name": "svchost",
+    "MemoryKB": 4700
+  },
+  {
+    "Id": 22960,
+    "Name": "svchost",
+    "MemoryKB": 6000
+  },
+  {
+    "Id": 23448,
+    "Name": "SecurityHealthService",
+    "MemoryKB": 5684
+  },
+  {
+    "Id": 17424,
+    "Name": "svchost",
+    "MemoryKB": 3348
+  },
+  {
+    "Id": 18496,
+    "Name": "svchost",
+    "MemoryKB": 1104
+  },
+  {
+    "Id": 2024,
+    "Name": "svchost",
+    "MemoryKB": 1076
+  },
+  {
+    "Id": 11672,
+    "Name": "svchost",
+    "MemoryKB": 2508
+  },
+  {
+    "Id": 19912,
+    "Name": "svchost",
+    "MemoryKB": 1920
+  },
+  {
+    "Id": 10360,
+    "Name": "csrss",
+    "MemoryKB": 4080
+  },
+  {
+    "Id": 6384,
+    "Name": "winlogon",
+    "MemoryKB": 6328
+  },
+  {
+    "Id": 5204,
+    "Name": "fontdrvhost",
+    "MemoryKB": 7352
+  },
+  {
+    "Id": 25976,
+    "Name": "dwm",
+    "MemoryKB": 569960
+  },
+  {
+    "Id": 3252,
+    "Name": "atieclxx",
+    "MemoryKB": 6836
+  },
+  {
+    "Id": 28172,
+    "Name": "NVDisplay.Container",
+    "MemoryKB": 20224
+  },
+  {
+    "Id": 27588,
+    "Name": "nvcontainer",
+    "MemoryKB": 26016
+  },
+  {
+    "Id": 13884,
+    "Name": "svchost",
+    "MemoryKB": 4832
+  },
+  {
+    "Id": 20348,
+    "Name": "nvcontainer",
+    "MemoryKB": 6320
+  },
+  {
+    "Id": 12992,
+    "Name": "nvcontainer",
+    "MemoryKB": 48064
+  },
+  {
+    "Id": 5912,
+    "Name": "ETDCtrl",
+    "MemoryKB": 2808
+  },
+  {
+    "Id": 13500,
+    "Name": "sihost",
+    "MemoryKB": 20124
+  },
+  {
+    "Id": 5404,
+    "Name": "svchost",
+    "MemoryKB": 24264
+  },
+  {
+    "Id": 18468,
+    "Name": "svchost",
+    "MemoryKB": 1792
+  },
+  {
+    "Id": 11760,
+    "Name": "svchost",
+    "MemoryKB": 17416
+  },
+  {
+    "Id": 27740,
+    "Name": "LightStudioHelper",
+    "MemoryKB": 36500
+  },
+  {
+    "Id": 12296,
+    "Name": "taskhostw",
+    "MemoryKB": 12508
+  },
+  {
+    "Id": 3684,
+    "Name": "OmenInstallMonitor",
+    "MemoryKB": 5004
+  },
+  {
+    "Id": 25880,
+    "Name": "explorer",
+    "MemoryKB": 307456
+  },
+  {
+    "Id": 27080,
+    "Name": "CrossDeviceResume",
+    "MemoryKB": 8172
+  },
+  {
+    "Id": 2656,
+    "Name": "svchost",
+    "MemoryKB": 14196
+  },
+  {
+    "Id": 12668,
+    "Name": "SearchHost",
+    "MemoryKB": 72328
+  },
+  {
+    "Id": 6628,
+    "Name": "StartMenuExperienceHost",
+    "MemoryKB": 106800
+  },
+  {
+    "Id": 7292,
+    "Name": "Widgets",
+    "MemoryKB": 36700
+  },
+  {
+    "Id": 15276,
+    "Name": "svchost",
+    "MemoryKB": 8828
+  },
+  {
+    "Id": 352,
+    "Name": "RuntimeBroker",
+    "MemoryKB": 23440
+  },
+  {
+    "Id": 23312,
+    "Name": "WidgetService",
+    "MemoryKB": 4492
+  },
+  {
+    "Id": 9864,
+    "Name": "nvsphelper64",
+    "MemoryKB": 2584
+  },
+  {
+    "Id": 1932,
+    "Name": "NVIDIA Overlay",
+    "MemoryKB": 59812
+  },
+  {
+    "Id": 5848,
+    "Name": "RtkAudUService64",
+    "MemoryKB": 3392
+  },
+  {
+    "Id": 2744,
+    "Name": "msedgewebview2",
+    "MemoryKB": 50680
+  },
+  {
+    "Id": 21064,
+    "Name": "msedgewebview2",
+    "MemoryKB": 2020
+  },
+  {
+    "Id": 13768,
+    "Name": "msedgewebview2",
+    "MemoryKB": 24028
+  },
+  {
+    "Id": 11664,
+    "Name": "msedgewebview2",
+    "MemoryKB": 13160
+  },
+  {
+    "Id": 25936,
+    "Name": "msedgewebview2",
+    "MemoryKB": 4756
+  },
+  {
+    "Id": 16216,
+    "Name": "msedgewebview2",
+    "MemoryKB": 51748
+  },
+  {
+    "Id": 4752,
+    "Name": "NVIDIA Overlay",
+    "MemoryKB": 11752
+  },
+  {
+    "Id": 25160,
+    "Name": "NVIDIA Overlay",
+    "MemoryKB": 20604
+  },
+  {
+    "Id": 8820,
+    "Name": "NVIDIA Overlay",
+    "MemoryKB": 4988
+  },
+  {
+    "Id": 17144,
+    "Name": "NVIDIA Overlay",
+    "MemoryKB": 27272
+  },
+  {
+    "Id": 21040,
+    "Name": "ctfmon",
+    "MemoryKB": 21340
+  },
+  {
+    "Id": 19488,
+    "Name": "TextInputHost",
+    "MemoryKB": 100964
+  },
+  {
+    "Id": 1820,
+    "Name": "RadeonSoftware",
+    "MemoryKB": 39632
+  },
+  {
+    "Id": 3132,
+    "Name": "CPUMetricsServer",
+    "MemoryKB": 2128
+  },
+  {
+    "Id": 6044,
+    "Name": "cncmd",
+    "MemoryKB": 160
+  },
+  {
+    "Id": 20268,
+    "Name": "cmd",
+    "MemoryKB": 384
+  },
+  {
+    "Id": 21396,
+    "Name": "conhost",
+    "MemoryKB": 244
+  },
+  {
+    "Id": 28124,
+    "Name": "AMDRSServ",
+    "MemoryKB": 200332
+  },
+  {
+    "Id": 17340,
+    "Name": "AMDRSSrcExt",
+    "MemoryKB": 17708
+  },
+  {
+    "Id": 26104,
+    "Name": "amdow",
+    "MemoryKB": 1100
+  },
+  {
+    "Id": 24008,
+    "Name": "svchost",
+    "MemoryKB": 5280
+  },
+  {
+    "Id": 27400,
+    "Name": "FileCoAuth",
+    "MemoryKB": 16732
+  },
+  {
+    "Id": 472,
+    "Name": "HpHwDiag",
+    "MemoryKB": 12500
+  },
+  {
+    "Id": 3820,
+    "Name": "ApplicationFrameHost",
+    "MemoryKB": 12112
+  },
+  {
+    "Id": 3168,
+    "Name": "svchost",
+    "MemoryKB": 6036
+  },
+  {
+    "Id": 6000,
+    "Name": "AppActions",
+    "MemoryKB": 6984
+  },
+  {
+    "Id": 2300,
+    "Name": "SDXHelper",
+    "MemoryKB": 29608
+  },
+  {
+    "Id": 16088,
+    "Name": "mtkbtsvc",
+    "MemoryKB": 576
+  },
+  {
+    "Id": 15704,
+    "Name": "svchost",
+    "MemoryKB": 7852
+  },
+  {
+    "Id": 13496,
+    "Name": "svchost",
+    "MemoryKB": 4376
+  },
+  {
+    "Id": 26108,
+    "Name": "XboxPcAppFT",
+    "MemoryKB": 11620
+  },
+  {
+    "Id": 2084,
+    "Name": "EdgeGameAssist",
+    "MemoryKB": 6416
+  },
+  {
+    "Id": 28376,
+    "Name": "UserOOBEBroker",
+    "MemoryKB": 5652
+  },
+  {
+    "Id": 14172,
+    "Name": "OneDrive.Sync.Service",
+    "MemoryKB": 13824
+  },
+  {
+    "Id": 19848,
+    "Name": "chrome",
+    "MemoryKB": 189456
+  },
+  {
+    "Id": 22024,
+    "Name": "chrome",
+    "MemoryKB": 3112
+  },
+  {
+    "Id": 25512,
+    "Name": "chrome",
+    "MemoryKB": 78656
+  },
+  {
+    "Id": 14928,
+    "Name": "chrome",
+    "MemoryKB": 41836
+  },
+  {
+    "Id": 9092,
+    "Name": "chrome",
+    "MemoryKB": 8408
+  },
+  {
+    "Id": 24876,
+    "Name": "chrome",
+    "MemoryKB": 61088
+  },
+  {
+    "Id": 23108,
+    "Name": "chrome",
+    "MemoryKB": 64308
+  },
+  {
+    "Id": 22604,
+    "Name": "chrome",
+    "MemoryKB": 436016
+  },
+  {
+    "Id": 972,
+    "Name": "chrome",
+    "MemoryKB": 183052
+  },
+  {
+    "Id": 26660,
+    "Name": "chrome",
+    "MemoryKB": 29096
+  },
+  {
+    "Id": 27536,
+    "Name": "chrome",
+    "MemoryKB": 7964
+  },
+  {
+    "Id": 11536,
+    "Name": "chrome",
+    "MemoryKB": 9760
+  },
+  {
+    "Id": 14276,
+    "Name": "chrome",
+    "MemoryKB": 245188
+  },
+  {
+    "Id": 6732,
+    "Name": "chrome",
+    "MemoryKB": 244268
+  },
+  {
+    "Id": 22076,
+    "Name": "chrome",
+    "MemoryKB": 14912
+  },
+  {
+    "Id": 27936,
+    "Name": "chrome",
+    "MemoryKB": 215036
+  },
+  {
+    "Id": 15852,
+    "Name": "chrome",
+    "MemoryKB": 45772
+  },
+  {
+    "Id": 8420,
+    "Name": "chrome",
+    "MemoryKB": 32748
+  },
+  {
+    "Id": 25388,
+    "Name": "chrome",
+    "MemoryKB": 15624
+  },
+  {
+    "Id": 22876,
+    "Name": "chrome",
+    "MemoryKB": 16968
+  },
+  {
+    "Id": 16144,
+    "Name": "chrome",
+    "MemoryKB": 37528
+  },
+  {
+    "Id": 11624,
+    "Name": "chrome",
+    "MemoryKB": 15996
+  },
+  {
+    "Id": 6104,
+    "Name": "chrome",
+    "MemoryKB": 10728
+  },
+  {
+    "Id": 27252,
+    "Name": "chrome",
+    "MemoryKB": 17224
+  },
+  {
+    "Id": 19220,
+    "Name": "WhatsApp.Root",
+    "MemoryKB": 99424
+  },
+  {
+    "Id": 8944,
+    "Name": "RuntimeBroker",
+    "MemoryKB": 3324
+  },
+  {
+    "Id": 13288,
+    "Name": "msedgewebview2",
+    "MemoryKB": 14468
+  },
+  {
+    "Id": 24724,
+    "Name": "msedgewebview2",
+    "MemoryKB": 2892
+  },
+  {
+    "Id": 9588,
+    "Name": "msedgewebview2",
+    "MemoryKB": 4496
+  },
+  {
+    "Id": 3524,
+    "Name": "msedgewebview2",
+    "MemoryKB": 7248
+  },
+  {
+    "Id": 17000,
+    "Name": "msedgewebview2",
+    "MemoryKB": 24
+  },
+  {
+    "Id": 15684,
+    "Name": "msedgewebview2",
+    "MemoryKB": 1056
+  },
+  {
+    "Id": 16768,
+    "Name": "msedgewebview2",
+    "MemoryKB": 2220
+  },
+  {
+    "Id": 25380,
+    "Name": "SystemSettings",
+    "MemoryKB": 1124
+  },
+  {
+    "Id": 22728,
+    "Name": "ShellExperienceHost",
+    "MemoryKB": 8512
+  },
+  {
+    "Id": 3288,
+    "Name": "RuntimeBroker",
+    "MemoryKB": 3984
+  },
+  {
+    "Id": 10044,
+    "Name": "svchost",
+    "MemoryKB": 3436
+  },
+  {
+    "Id": 29616,
+    "Name": "Code",
+    "MemoryKB": 133772
+  },
+  {
+    "Id": 12352,
+    "Name": "Code",
+    "MemoryKB": 8200
+  },
+  {
+    "Id": 4512,
+    "Name": "Code",
+    "MemoryKB": 117412
+  },
+  {
+    "Id": 29416,
+    "Name": "Code",
+    "MemoryKB": 20240
+  },
+  {
+    "Id": 20456,
+    "Name": "Code",
+    "MemoryKB": 422684
+  },
+  {
+    "Id": 3004,
+    "Name": "Code",
+    "MemoryKB": 55980
+  },
+  {
+    "Id": 5808,
+    "Name": "Code",
+    "MemoryKB": 291720
+  },
+  {
+    "Id": 13988,
+    "Name": "Code",
+    "MemoryKB": 41768
+  },
+  {
+    "Id": 9484,
+    "Name": "Code",
+    "MemoryKB": 36652
+  },
+  {
+    "Id": 17844,
+    "Name": "Microsoft.CodeAnalysis.LanguageServer",
+    "MemoryKB": 407852
+  },
+  {
+    "Id": 3208,
+    "Name": "escape-node-job",
+    "MemoryKB": 1184
+  },
+  {
+    "Id": 25456,
+    "Name": "conhost",
+    "MemoryKB": 996
+  },
+  {
+    "Id": 25536,
+    "Name": "Microsoft.VisualStudio.Code.Server",
+    "MemoryKB": 80204
+  },
+  {
+    "Id": 23256,
+    "Name": "Microsoft.VisualStudio.Code.ServiceController",
+    "MemoryKB": 52464
+  },
+  {
+    "Id": 21736,
+    "Name": "conhost",
+    "MemoryKB": 6024
+  },
+  {
+    "Id": 8176,
+    "Name": "Microsoft.VisualStudio.Code.ServiceHost",
+    "MemoryKB": 70152
+  },
+  {
+    "Id": 14248,
+    "Name": "conhost",
+    "MemoryKB": 1388
+  },
+  {
+    "Id": 24224,
+    "Name": "Microsoft.VisualStudio.Code.ServiceHost",
+    "MemoryKB": 45072
+  },
+  {
+    "Id": 21092,
+    "Name": "conhost",
+    "MemoryKB": 1004
+  },
+  {
+    "Id": 18000,
+    "Name": "dotnet",
+    "MemoryKB": 10484
+  },
+  {
+    "Id": 6136,
+    "Name": "conhost",
+    "MemoryKB": 1176
+  },
+  {
+    "Id": 27272,
+    "Name": "Code",
+    "MemoryKB": 40612
+  },
+  {
+    "Id": 5096,
+    "Name": "Code",
+    "MemoryKB": 50544
+  },
+  {
+    "Id": 15300,
+    "Name": "hpqwmiex",
+    "MemoryKB": 4036
+  },
+  {
+    "Id": 15844,
+    "Name": "svchost",
+    "MemoryKB": 3392
+  },
+  {
+    "Id": 16368,
+    "Name": "msedge",
+    "MemoryKB": 58388
+  },
+  {
+    "Id": 14940,
+    "Name": "msedge",
+    "MemoryKB": 3820
+  },
+  {
+    "Id": 13184,
+    "Name": "msedge",
+    "MemoryKB": 13760
+  },
+  {
+    "Id": 16360,
+    "Name": "msedge",
+    "MemoryKB": 22492
+  },
+  {
+    "Id": 22688,
+    "Name": "msedge",
+    "MemoryKB": 6496
+  },
+  {
+    "Id": 23704,
+    "Name": "svchost",
+    "MemoryKB": 2588
+  },
+  {
+    "Id": 21748,
+    "Name": "svchost",
+    "MemoryKB": 6048
+  },
+  {
+    "Id": 4224,
+    "Name": "Code",
+    "MemoryKB": 43056
+  },
+  {
+    "Id": 3144,
+    "Name": "Code",
+    "MemoryKB": 40024
+  },
+  {
+    "Id": 15088,
+    "Name": "svchost",
+    "MemoryKB": 23892
+  },
+  {
+    "Id": 19584,
+    "Name": "chrome",
+    "MemoryKB": 70208
+  },
+  {
+    "Id": 20980,
+    "Name": "LockApp",
+    "MemoryKB": 41388
+  },
+  {
+    "Id": 26684,
+    "Name": "RuntimeBroker",
+    "MemoryKB": 34792
+  },
+  {
+    "Id": 14000,
+    "Name": "svchost",
+    "MemoryKB": 5552
+  },
+  {
+    "Id": 1604,
+    "Name": "conhost",
+    "MemoryKB": 8340
+  },
+  {
+    "Id": 4848,
+    "Name": "powershell",
+    "MemoryKB": 85264
+  },
+  {
+    "Id": 27032,
+    "Name": "ShellHost",
+    "MemoryKB": 48336
+  },
+  {
+    "Id": 20848,
+    "Name": "chrome",
+    "MemoryKB": 33476
+  },
+  {
+    "Id": 14212,
+    "Name": "WmiPrvSE",
+    "MemoryKB": 17984
+  },
+  {
+    "Id": 25216,
+    "Name": "chrome",
+    "MemoryKB": 156520
+  },
+  {
+    "Id": 3764,
+    "Name": "VBCSCompiler",
+    "MemoryKB": 129732
+  },
+  {
+    "Id": 26572,
+    "Name": "conhost",
+    "MemoryKB": 7308
+  },
+  {
+    "Id": 28148,
+    "Name": "svchost",
+    "MemoryKB": 9732
+  },
+  {
+    "Id": 8200,
+    "Name": "WmiApSrv",
+    "MemoryKB": 12124
+  },
+  {
+    "Id": 26712,
+    "Name": "EXCEL",
+    "MemoryKB": 263656
+  },
+  {
+    "Id": 11100,
+    "Name": "aimgr",
+    "MemoryKB": 36208
+  },
+  {
+    "Id": 26744,
+    "Name": "svchost",
+    "MemoryKB": 9028
+  },
+  {
+    "Id": 11360,
+    "Name": "svchost",
+    "MemoryKB": 141496
+  },
+  {
+    "Id": 19204,
+    "Name": "EXCEL",
+    "MemoryKB": 174088
+  },
+  {
+    "Id": 19352,
+    "Name": "splwow64",
+    "MemoryKB": 27380
+  },
+  {
+    "Id": 22792,
+    "Name": "dotnet",
+    "MemoryKB": 129096
+  },
+  {
+    "Id": 24848,
+    "Name": "WindowsProcesses",
+    "MemoryKB": 19284
+  }
+]

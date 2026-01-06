@@ -1,0 +1,30 @@
+{
+  "Items": [
+    {
+      "Name": "Sachin",
+      "Subjects": [
+        "Maths",
+        "Physics",
+        "CS"
+      ],
+      "Marks": [
+        90,
+        90,
+        90
+      ]
+    },
+    {
+      "Name": "Sahil",
+      "Subjects": [
+        "Maths",
+        "Chemistry",
+        "CS"
+      ],
+      "Marks": [
+        88,
+        92,
+        91
+      ]
+    }
+  ]
+}

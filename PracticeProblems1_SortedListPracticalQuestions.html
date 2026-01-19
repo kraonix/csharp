@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Programming Assessment</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f7f6; }
+        h1 { border-bottom: 3px solid #2c3e50; padding-bottom: 10px; color: #2c3e50; text-align: center; }
+        h2 { background: #2c3e50; color: #fff; padding: 10px 15px; margin-top: 40px; border-radius: 5px; }
+        h3 { color: #2980b9; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #ecf0f1; color: #333; font-weight: bold; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .note { background: #fff3cd; border-left: 5px solid #ffecb5; padding: 15px; margin: 20px 0; font-style: italic; }
+        .property-list { list-style: none; padding: 0; }
+        .property-list li::before { content: "• "; color: #2980b9; font-weight: bold; }
+        .formula { background: #eee; padding: 10px; display: inline-block; border-radius: 4px; font-family: 'Courier New', Courier, monospace; }
+    </style>
+</head>
+<body>
+
+    <h1>C# Assessment Questions</h1>
+
+    <section>
+        <h2>1. Find Items</h2>
+        <p><strong>Context:</strong> Developing a C# application using <code>SortedDictionary</code> and <code>List</code>.</p>
+        <h3>Functionalities</h3>
+        <p>In the <code>Program</code> class, a <code>public static SortedDictionary&lt;String, long&gt; itemDetails</code> is provided. Implement the following:</p>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>public SortedDictionary&lt;String, long&gt; FindItemDetails(long soldCount)</code></td>
+                <td>Finds item details by sold count. Return the item as a SortedDictionary. If not found, return empty. Print "Invalid sold count" in Main if empty.</td>
+            </tr>
+            <tr>
+                <td><code>public List&lt;String&gt; FindMinandMaxSoldItems()</code></td>
+                <td>Finds min and max sold items. Add minimum first, then maximum to a List and return it.</td>
+            </tr>
+            <tr>
+                <td><code>public Dictionary&lt;string, long&gt; SortByCount()</code></td>
+                <td>Displays all items in ascending order by sold count. Return as a Dictionary.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>2. Movie Stock</h2>
+        <h3>Movie Class Properties</h3>
+        <ul class="property-list">
+            <li>string Title</li>
+            <li>string Artist</li>
+            <li>string Genre</li>
+            <li>int Ratings</li>
+        </ul>
+        <h3>Program Methods</h3>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>public void AddMovie(string MovieDetails)</code></td>
+                <td>Accepts a comma-separated string, converts it to a Movie object, and adds it to <code>MovieList</code>.</td>
+            </tr>
+            <tr>
+                <td><code>public List&lt;Movie&gt; ViewMoviesByGenre(string genre)</code></td>
+                <td>Returns movies of a specific genre. If none, print "No Movies found in genre '{genre}'".</td>
+            </tr>
+            <tr>
+                <td><code>public List&lt;Movie&gt; ViewMoviesByRatings()</code></td>
+                <td>Sorts movies by ratings in ascending order and returns the list.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>3. Calculate Numbers</h2>
+        <p><strong>GPA Formula:</strong> <span class="formula">GPA = (Sum of products of Numbers * 3) / (List count * 3)</span></p>
+        <h3>Grade Mapping</h3>
+        <table>
+            <tr><th>GPA</th><th>Grade</th></tr>
+            <tr><td>Equal to 10</td><td>S</td></tr>
+            <tr><td>>= 9 and < 10</td><td>A</td></tr>
+            <tr><td>>= 8 and < 9</td><td>B</td></tr>
+            <tr><td>>= 7 and < 8</td><td>C</td></tr>
+            <tr><td>>= 6 and < 7</td><td>D</td></tr>
+            <tr><td>>= 5 and < 6</td><td>E</td></tr>
+        </table>
+        <div class="note">Note: If GPA < 5 or > 10, return null and print "Invalid GPA".</div>
+    </section>
+
+    <section>
+        <h2>4. Yoga Meditation</h2>
+        <p><strong>BMI Formula:</strong> <span class="formula">Weight (Kgs) / [Height (In) * Height (In)]</span> (Use Math.Floor)</p>
+        <h3>Membership Fees</h3>
+        <table>
+            <tr><th>Goal</th><th>BMI Range</th><th>Fee</th></tr>
+            <tr><td>Weight Loss</td><td>BMI >= 25 & < 30</td><td>2000</td></tr>
+            <tr><td>Weight Loss</td><td>BMI >= 30 & < 35</td><td>2500</td></tr>
+            <tr><td>Weight Loss</td><td>BMI >= 35</td><td>3000</td></tr>
+            <tr><td>Weight Gain</td><td>Any</td><td>2500</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Custom Exception Handling (Questions 5-8)</h2>
+        <table>
+            <tr>
+                <th>Scenario</th>
+                <th>Exception Class</th>
+                <th>Message</th>
+            </tr>
+            <tr>
+                <td>Wallet Balance < Purchase Amount</td>
+                <td><code>InsufficientWalletBalanceException</code></td>
+                <td>"Insufficient balance in your digital wallet"</td>
+            </tr>
+            <tr>
+                <td>Password Mismatch</td>
+                <td><code>PasswordMismatchException</code></td>
+                <td>"Password entered does not match"</td>
+            </tr>
+            <tr>
+                <td>Construction Area > Site Area</td>
+                <td><code>ConstructionEstimateException</code></td>
+                <td>"Sorry your Construction Estimate is not approved"</td>
+            </tr>
+            <tr>
+                <td>Phone Number Length != 10</td>
+                <td><code>InvalidPhoneNumberException</code></td>
+                <td>"Invalid phone number"</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p style="text-align: center; margin-top: 50px; color: #7f8c8d;">&copy; 2026 Assessment Transcription</p>
+    </footer>
+
+</body>
+</html>

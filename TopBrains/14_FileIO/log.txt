@@ -1,0 +1,8 @@
+[2026-01-19 09:10:01] INFO  Application started
+[2026-01-19 09:10:05] INFO  User logged in
+[2026-01-19 09:10:08] ERROR Failed to connect to database
+[2026-01-19 09:10:12] WARN  Low memory warning
+[2026-01-19 09:10:15] ERROR Invalid user input
+[2026-01-19 09:10:18] INFO  Processing request
+[2026-01-19 09:10:21] ERROR File not found
+[2026-01-19 09:10:25] INFO  Application terminated

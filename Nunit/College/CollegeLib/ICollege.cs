@@ -1,0 +1,7 @@
+namespace CollegeLib
+{
+    interface ICollege
+    {
+        
+    }
+}

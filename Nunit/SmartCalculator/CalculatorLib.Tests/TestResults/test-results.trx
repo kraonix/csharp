@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="a4f04267-f7bd-4e0b-b6ec-ee92fdeaf98e" name="SACHIN@SACHIN 2026-01-29 13:52:11" runUser="SACHIN\SACHIN" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-01-29T13:52:11.7198761+05:30" queuing="2026-01-29T13:52:11.7198765+05:30" start="2026-01-29T13:52:11.0702308+05:30" finish="2026-01-29T13:52:11.7250554+05:30" />
+  <TestSettings name="default" id="15859fd3-dc53-4b68-95de-b453b8225b6f">
+    <Deployment runDeploymentRoot="SACHIN_SACHIN_2026-01-29_13_52_11" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="705b8b9c-71c6-4106-9ae5-8a3e26da5aae" testId="ba334007-1ef5-4744-60cd-3330980b937f" testName="Add_Works" computerName="SACHIN" duration="00:00:00.0012450" startTime="2026-01-29T13:52:11.5936807+05:30" endTime="2026-01-29T13:52:11.5949258+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="705b8b9c-71c6-4106-9ae5-8a3e26da5aae" />
+    <UnitTestResult executionId="6b8351c5-194b-4b33-985d-d37ddc1e2407" testId="acd6ed96-f7e9-202d-c65e-d564e44c9235" testName="SquareRoot_Negative_ShouldThrow" computerName="SACHIN" duration="00:00:00.0003190" startTime="2026-01-29T13:52:11.5977352+05:30" endTime="2026-01-29T13:52:11.5980536+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b8351c5-194b-4b33-985d-d37ddc1e2407" />
+    <UnitTestResult executionId="dc27dffe-8400-4738-95d1-6e395fc67a48" testId="06eb8b52-0742-bebe-dcb2-c11dfd28d65b" testName="ParseAndAdd_ValidStrings(&quot;5&quot;,&quot;5&quot;,10)" computerName="SACHIN" duration="00:00:00.0002920" startTime="2026-01-29T13:52:11.5962190+05:30" endTime="2026-01-29T13:52:11.5965112+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc27dffe-8400-4738-95d1-6e395fc67a48" />
+    <UnitTestResult executionId="a4cd486b-fc4f-40a6-844e-25ef307b155a" testId="61cbcabc-306a-d3e9-c5f3-c26aaaf7cfd6" testName="Divide_ByZero_ShouldThrow" computerName="SACHIN" duration="00:00:00.0003540" startTime="2026-01-29T13:52:11.5949504+05:30" endTime="2026-01-29T13:52:11.5953046+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4cd486b-fc4f-40a6-844e-25ef307b155a" />
+    <UnitTestResult executionId="9fa3622e-63ee-4666-b468-1c93d80ea63b" testId="836dffea-3ca8-2798-701a-ed0c173746c1" testName="ParseAndAdd_InvalidString_ShouldThrow" computerName="SACHIN" duration="00:00:00.0006640" startTime="2026-01-29T13:52:11.5953295+05:30" endTime="2026-01-29T13:52:11.5959936+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9fa3622e-63ee-4666-b468-1c93d80ea63b" />
+    <UnitTestResult executionId="a6775c71-42f5-4aba-881e-c6d790d3ea0f" testId="487b27e7-b61a-9acd-f4b9-24ca59c42c23" testName="ParseAndAdd_ValidStrings(&quot;10&quot;,&quot;20&quot;,30)" computerName="SACHIN" duration="00:00:00.0001130" startTime="2026-01-29T13:52:11.5960651+05:30" endTime="2026-01-29T13:52:11.5961784+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6775c71-42f5-4aba-881e-c6d790d3ea0f" />
+    <UnitTestResult executionId="43619259-d4f7-454a-9e72-ffb15240e9e6" testId="dbfb4554-7bf3-1e01-82e9-cdac0baaf2e6" testName="Add_Overflow_ShouldThrow" computerName="SACHIN" duration="00:00:00.0074170" startTime="2026-01-29T13:52:11.5849639+05:30" endTime="2026-01-29T13:52:11.5923302+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="43619259-d4f7-454a-9e72-ffb15240e9e6" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="ParseAndAdd_ValidStrings(&quot;10&quot;,&quot;20&quot;,30)" storage="c:\users\sachin\desktop\.net\nunit\smartcalculator\calculatorlib.tests\bin\debug\net10.0\calculatorlib.tests.dll" id="487b27e7-b61a-9acd-f4b9-24ca59c42c23">
+      <Execution id="a6775c71-42f5-4aba-881e-c6d790d3ea0f" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\smartcalculator\CalculatorLib.Tests\bin\Debug\net10.0\CalculatorLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="CalculatorLib.Tests.CalculatorTests" name="ParseAndAdd_ValidStrings(&quot;10&quot;,&quot;20&quot;,30)" />
+    </UnitTest>
+    <UnitTest name="ParseAndAdd_ValidStrings(&quot;5&quot;,&quot;5&quot;,10)" storage="c:\users\sachin\desktop\.net\nunit\smartcalculator\calculatorlib.tests\bin\debug\net10.0\calculatorlib.tests.dll" id="06eb8b52-0742-bebe-dcb2-c11dfd28d65b">
+      <Execution id="dc27dffe-8400-4738-95d1-6e395fc67a48" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\smartcalculator\CalculatorLib.Tests\bin\Debug\net10.0\CalculatorLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="CalculatorLib.Tests.CalculatorTests" name="ParseAndAdd_ValidStrings(&quot;5&quot;,&quot;5&quot;,10)" />
+    </UnitTest>
+    <UnitTest name="SquareRoot_Negative_ShouldThrow" storage="c:\users\sachin\desktop\.net\nunit\smartcalculator\calculatorlib.tests\bin\debug\net10.0\calculatorlib.tests.dll" id="acd6ed96-f7e9-202d-c65e-d564e44c9235">
+      <Execution id="6b8351c5-194b-4b33-985d-d37ddc1e2407" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\smartcalculator\CalculatorLib.Tests\bin\Debug\net10.0\CalculatorLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="CalculatorLib.Tests.CalculatorTests" name="SquareRoot_Negative_ShouldThrow" />
+    </UnitTest>
+    <UnitTest name="Add_Works" storage="c:\users\sachin\desktop\.net\nunit\smartcalculator\calculatorlib.tests\bin\debug\net10.0\calculatorlib.tests.dll" id="ba334007-1ef5-4744-60cd-3330980b937f">
+      <Execution id="705b8b9c-71c6-4106-9ae5-8a3e26da5aae" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\smartcalculator\CalculatorLib.Tests\bin\Debug\net10.0\CalculatorLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="CalculatorLib.Tests.CalculatorTests" name="Add_Works" />
+    </UnitTest>
+    <UnitTest name="Divide_ByZero_ShouldThrow" storage="c:\users\sachin\desktop\.net\nunit\smartcalculator\calculatorlib.tests\bin\debug\net10.0\calculatorlib.tests.dll" id="61cbcabc-306a-d3e9-c5f3-c26aaaf7cfd6">
+      <Execution id="a4cd486b-fc4f-40a6-844e-25ef307b155a" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\smartcalculator\CalculatorLib.Tests\bin\Debug\net10.0\CalculatorLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="CalculatorLib.Tests.CalculatorTests" name="Divide_ByZero_ShouldThrow" />
+    </UnitTest>
+    <UnitTest name="Add_Overflow_ShouldThrow" storage="c:\users\sachin\desktop\.net\nunit\smartcalculator\calculatorlib.tests\bin\debug\net10.0\calculatorlib.tests.dll" id="dbfb4554-7bf3-1e01-82e9-cdac0baaf2e6">
+      <Execution id="43619259-d4f7-454a-9e72-ffb15240e9e6" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\smartcalculator\CalculatorLib.Tests\bin\Debug\net10.0\CalculatorLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="CalculatorLib.Tests.CalculatorTests" name="Add_Overflow_ShouldThrow" />
+    </UnitTest>
+    <UnitTest name="ParseAndAdd_InvalidString_ShouldThrow" storage="c:\users\sachin\desktop\.net\nunit\smartcalculator\calculatorlib.tests\bin\debug\net10.0\calculatorlib.tests.dll" id="836dffea-3ca8-2798-701a-ed0c173746c1">
+      <Execution id="9fa3622e-63ee-4666-b468-1c93d80ea63b" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\smartcalculator\CalculatorLib.Tests\bin\Debug\net10.0\CalculatorLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="CalculatorLib.Tests.CalculatorTests" name="ParseAndAdd_InvalidString_ShouldThrow" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="ba334007-1ef5-4744-60cd-3330980b937f" executionId="705b8b9c-71c6-4106-9ae5-8a3e26da5aae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="acd6ed96-f7e9-202d-c65e-d564e44c9235" executionId="6b8351c5-194b-4b33-985d-d37ddc1e2407" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06eb8b52-0742-bebe-dcb2-c11dfd28d65b" executionId="dc27dffe-8400-4738-95d1-6e395fc67a48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61cbcabc-306a-d3e9-c5f3-c26aaaf7cfd6" executionId="a4cd486b-fc4f-40a6-844e-25ef307b155a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="836dffea-3ca8-2798-701a-ed0c173746c1" executionId="9fa3622e-63ee-4666-b468-1c93d80ea63b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="487b27e7-b61a-9acd-f4b9-24ca59c42c23" executionId="a6775c71-42f5-4aba-881e-c6d790d3ea0f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dbfb4554-7bf3-1e01-82e9-cdac0baaf2e6" executionId="43619259-d4f7-454a-9e72-ffb15240e9e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started&#xD;
+Running all tests in C:\Users\SACHIN\Desktop\.NET\nunit\smartcalculator\CalculatorLib.Tests\bin\Debug\net10.0\CalculatorLib.Tests.dll&#xD;
+   NUnit3TestExecutor discovered 7 of 7 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 5.0.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

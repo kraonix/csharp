@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="444c776d-eebe-4848-b380-24cbfe025c0b" name="SACHIN@SACHIN 2026-01-29 14:38:39" runUser="SACHIN\SACHIN" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-01-29T14:38:39.3795856+05:30" queuing="2026-01-29T14:38:39.3795861+05:30" start="2026-01-29T14:38:38.7265013+05:30" finish="2026-01-29T14:38:39.3839327+05:30" />
+  <TestSettings name="default" id="e43b57c7-c1c8-4d15-8470-646713cc89fa">
+    <Deployment runDeploymentRoot="SACHIN_SACHIN_2026-01-29_14_38_39" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="409a8bc6-2396-4c38-8062-d318ed95c9c6" testId="83178077-a1b8-d734-52c3-48e596eeb14a" testName="ContractEmployee_Salary_IsHoursTimesRate" computerName="SACHIN" duration="00:00:00.0037560" startTime="2026-01-29T14:38:39.2357953+05:30" endTime="2026-01-29T14:38:39.2395129+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="409a8bc6-2396-4c38-8062-d318ed95c9c6" />
+    <UnitTestResult executionId="1c9bf1fe-546e-472f-a14d-06aa4509f896" testId="3636885b-c062-54e1-a3ad-4022ed53f386" testName="FullTimeEmployee_Salary_IsBasePlusBonus" computerName="SACHIN" duration="00:00:00.0003390" startTime="2026-01-29T14:38:39.2403082+05:30" endTime="2026-01-29T14:38:39.2406470+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c9bf1fe-546e-472f-a14d-06aa4509f896" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="ContractEmployee_Salary_IsHoursTimesRate" storage="c:\users\sachin\desktop\.net\nunit\employeesystem\employeelib.tests\bin\debug\net10.0\employeelib.tests.dll" id="83178077-a1b8-d734-52c3-48e596eeb14a">
+      <Execution id="409a8bc6-2396-4c38-8062-d318ed95c9c6" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\employeesystem\EmployeeLib.Tests\bin\Debug\net10.0\EmployeeLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EmployeeLib.Tests.EmployeeTests" name="ContractEmployee_Salary_IsHoursTimesRate" />
+    </UnitTest>
+    <UnitTest name="FullTimeEmployee_Salary_IsBasePlusBonus" storage="c:\users\sachin\desktop\.net\nunit\employeesystem\employeelib.tests\bin\debug\net10.0\employeelib.tests.dll" id="3636885b-c062-54e1-a3ad-4022ed53f386">
+      <Execution id="1c9bf1fe-546e-472f-a14d-06aa4509f896" />
+      <TestMethod codeBase="C:\Users\SACHIN\Desktop\.NET\nunit\employeesystem\EmployeeLib.Tests\bin\Debug\net10.0\EmployeeLib.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="EmployeeLib.Tests.EmployeeTests" name="FullTimeEmployee_Salary_IsBasePlusBonus" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="83178077-a1b8-d734-52c3-48e596eeb14a" executionId="409a8bc6-2396-4c38-8062-d318ed95c9c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3636885b-c062-54e1-a3ad-4022ed53f386" executionId="1c9bf1fe-546e-472f-a14d-06aa4509f896" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started&#xD;
+Running all tests in C:\Users\SACHIN\Desktop\.NET\nunit\employeesystem\EmployeeLib.Tests\bin\Debug\net10.0\EmployeeLib.Tests.dll&#xD;
+   NUnit3TestExecutor discovered 2 of 2 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 5.0.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

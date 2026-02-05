@@ -1,0 +1,10 @@
+namespace RMM
+{
+    public class MenuItem
+    {
+        public string ItemName {get; set;}
+        public string Category {get; set;}
+        public double Price {get; set;}
+        public bool IsVegetarian {get; set;}
+    }    
+}

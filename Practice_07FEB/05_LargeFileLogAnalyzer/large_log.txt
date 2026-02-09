@@ -1,0 +1,30 @@
+2026-02-07 10:01:12 INFO User login successful UserId=101
+2026-02-07 10:01:15 ERROR Payment failed ERR101 TransactionId=TXN001
+2026-02-07 10:01:18 WARN Slow response detected
+2026-02-07 10:01:20 ERROR Database timeout ERR500
+2026-02-07 10:01:22 ERROR Payment failed ERR101 TransactionId=TXN002
+2026-02-07 10:01:25 INFO Order created OrderId=2001
+2026-02-07 10:01:28 ERROR Authentication failed ERR401
+2026-02-07 10:01:30 ERROR Database timeout ERR500
+2026-02-07 10:01:32 ERROR Payment failed ERR101 TransactionId=TXN003
+2026-02-07 10:01:35 INFO User logout UserId=101
+2026-02-07 10:01:38 ERROR Internal server error ERR500
+2026-02-07 10:01:40 ERROR Authentication failed ERR401
+2026-02-07 10:01:42 ERROR Payment failed ERR101
+2026-02-07 10:01:45 WARN Disk space low
+2026-02-07 10:01:48 ERROR Database timeout ERR500
+2026-02-07 10:01:50 ERROR Authentication failed ERR401
+2026-02-07 10:01:52 INFO Order shipped OrderId=2001
+2026-02-07 10:01:55 ERROR Payment failed ERR101
+2026-02-07 10:01:58 ERROR Database timeout ERR500
+2026-02-07 10:02:00 ERROR Authentication failed ERR401
+2026-02-07 10:02:03 ERROR Internal server error ERR500
+2026-02-07 10:02:06 ERROR Payment failed ERR101
+2026-02-07 10:02:08 INFO User login successful UserId=202
+2026-02-07 10:02:10 ERROR Payment failed ERR101
+2026-02-07 10:02:12 ERROR Authentication failed ERR401
+2026-02-07 10:02:15 ERROR Database timeout ERR500
+2026-02-07 10:02:18 ERROR Payment failed ERR101
+2026-02-07 10:02:20 INFO Cache refreshed
+2026-02-07 10:02:23 ERROR Authentication failed ERR401
+2026-02-07 10:02:25 ERROR Internal server error ERR500

@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C# Files (File Handling) — W3School+ Notes for Freshers</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a2e;
+      --card:#0f213d;
+      --text:#e9eef9;
+      --muted:#b8c2d9;
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --ok:#34d399;
+      --warn:#fbbf24;
+      --bad:#fb7185;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --code:#0b1020;
+      --codeBorder: rgba(125,211,252,.18);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: radial-gradient(1200px 800px at 15% 10%, rgba(167,139,250,.18), transparent 60%),
+                  radial-gradient(900px 700px at 90% 0%, rgba(125,211,252,.15), transparent 55%),
+                  linear-gradient(180deg, var(--bg), #070b14 55%, #070b14);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.72);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar{
+      max-width:1100px; margin:0 auto; padding:14px 16px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .badge{
+      font-size:12px; padding:2px 10px; border-radius:999px;
+      background: linear-gradient(90deg, rgba(125,211,252,.20), rgba(167,139,250,.20));
+      border:1px solid var(--border);
+      color:var(--muted);
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:10px;
+      background: rgba(15,26,46,.9);
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      color:var(--text);
+      cursor:pointer;
+    }
+    .btn:hover{border-color: rgba(125,211,252,.4)}
+    main{max-width:1100px; margin:0 auto; padding:22px 16px 80px}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:16px;
+      margin-top:10px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(15,26,46,.9), rgba(15,26,46,.55));
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .hero h1{margin:0 0 8px; font-size:30px; line-height:1.2}
+    .hero p{margin:0; color:var(--muted)}
+    .pillrow{margin-top:12px; display:flex; flex-wrap:wrap; gap:8px}
+    .pill{
+      font-size:12px; color:var(--muted);
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(15,33,61,.65);
+    }
+    .side h3{margin:0 0 10px; font-size:14px; letter-spacing:.2px; color:var(--muted)}
+    .toc{display:grid; gap:8px}
+    .toc a{
+      display:block; padding:10px 12px; border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(15,33,61,.55);
+      color:var(--text);
+    }
+    .toc a:hover{border-color: rgba(167,139,250,.45)}
+    .grid2{
+      display:grid; grid-template-columns:1fr 1fr; gap:16px;
+    }
+    h2{margin:28px 0 10px; font-size:22px}
+    h3{margin:18px 0 8px; font-size:16px}
+    .note{
+      border-left:4px solid rgba(125,211,252,.7);
+      background: rgba(125,211,252,.08);
+      padding:12px 12px;
+      border-radius:12px;
+      color:var(--muted);
+      margin:12px 0;
+    }
+    .warn{
+      border-left:4px solid rgba(251,191,36,.9);
+      background: rgba(251,191,36,.10);
+    }
+    .good{
+      border-left:4px solid rgba(52,211,153,.9);
+      background: rgba(52,211,153,.10);
+    }
+    ul{margin:8px 0 0 18px; color:var(--muted)}
+    .kbd{font-family:var(--mono); font-size:12px; padding:2px 6px; border-radius:8px; border:1px solid var(--border); background: rgba(15,33,61,.55); color:var(--text)}
+    pre{
+      margin:12px 0;
+      background: linear-gradient(180deg, rgba(11,16,32,.92), rgba(11,16,32,.65));
+      border:1px solid var(--codeBorder);
+      border-radius:14px;
+      padding:14px;
+      overflow:auto;
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    }
+    code{
+      font-family:var(--mono);
+      font-size:13px;
+      color:#eaf2ff;
+    }
+    .code-title{
+      display:flex; align-items:center; justify-content:space-between;
+      font-size:12px; color:var(--muted);
+      margin-top:10px;
+    }
+    .table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:10px;
+      overflow:hidden;
+      border-radius:14px;
+      border:1px solid var(--border);
+    }
+    .table th, .table td{
+      padding:10px 12px;
+      border-bottom:1px solid var(--border);
+      text-align:left;
+      vertical-align:top;
+      color:var(--muted);
+    }
+    .table th{
+      color:var(--text);
+      font-weight:700;
+      background: rgba(15,33,61,.55);
+    }
+    .table tr:last-child td{border-bottom:none}
+    .svgwrap{
+      background: rgba(15,33,61,.45);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:12px;
+      margin-top:10px;
+    }
+    .callout{
+      display:grid; gap:10px;
+      background: rgba(15,33,61,.40);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px;
+      margin-top:12px;
+    }
+    .callout b{color:var(--text)}
+    .footer{
+      margin-top:40px;
+      border-top:1px solid var(--border);
+      padding-top:16px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    /* hover highlight */
+    .hl:hover{
+      background: rgba(167,139,250,.10);
+      border-radius:10px;
+      transition: background .15s ease;
+    }
+    /* auto-highlight on scroll */
+    section{
+      scroll-margin-top: 90px;
+      padding-top: 6px;
+    }
+    .active-section{
+      outline: 2px solid rgba(125,211,252,.35);
+      border-radius: 14px;
+      padding: 8px 10px;
+      margin-left: -10px;
+      margin-right: -10px;
+      background: rgba(125,211,252,.04);
+    }
+    @media (max-width: 950px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <div class="brand">
+      <span style="display:inline-block;width:12px;height:12px;border-radius:4px;background:linear-gradient(135deg,var(--accent),var(--accent2));"></span>
+      <span>C# Files — W3School+ Notes</span>
+      <span class="badge">Freshers • Detailed • With Diagram</span>
+    </div>
+    <button class="btn" onclick="window.print()" title="Print / Save as PDF">
+      🖨️ <span>Print</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="card">
+      <h1>C# Files (File Handling) — Super Beginner to Practical</h1>
+      <p class="hl">
+        In real projects, your app must read and write files: logs, config files, reports, CSV exports,
+        JSON data, backups, and uploads. C# provides a clean set of APIs in <span class="kbd">System.IO</span> to do this safely.
+      </p>
+      <div class="pillrow">
+        <span class="pill">File / FileInfo</span>
+        <span class="pill">Directory / DirectoryInfo</span>
+        <span class="pill">Path</span>
+        <span class="pill">Stream & StreamReader/Writer</span>
+        <span class="pill">Exceptions & Best Practices</span>
+        <span class="pill">Async file I/O</span>
+      </div>
+
+      <div class="note good">
+        <b>Goal for freshers:</b> After reading this page, you should be able to:
+        (1) create a file, (2) read a file, (3) append text, (4) copy/move/delete,
+        (5) handle common errors, and (6) write clean “exam-ready” code.
+      </div>
+    </div>
+
+    <aside class="card side">
+      <h3>Contents</h3>
+      <div class="toc" id="toc">
+        <a href="#what">1) What is File Handling?</a>
+        <a href="#when">2) When do we use files in real life?</a>
+        <a href="#core">3) Core classes (System.IO)</a>
+        <a href="#paths">4) Paths + working directory</a>
+        <a href="#text">5) Read/Write Text (File)</a>
+        <a href="#streams">6) Streams (StreamReader/Writer)</a>
+        <a href="#ops">7) Copy/Move/Delete + Directory</a>
+        <a href="#errors">8) Common errors + try/catch</a>
+        <a href="#async">9) Async file I/O</a>
+        <a href="#best">10) Best practices</a>
+        <a href="#ex">11) Exercises</a>
+      </div>
+    </aside>
+  </div>
+
+  <section id="what">
+    <h2>1) What is File Handling?</h2>
+    <p class="hl">
+      <b>File handling</b> means your program can <b>create</b>, <b>read</b>, <b>write</b>, <b>append</b>,
+      <b>copy</b>, <b>move</b>, and <b>delete</b> files on the computer.
+      In C#, these features are provided mainly by the <span class="kbd">System.IO</span> namespace.
+    </p>
+
+    <div class="svgwrap" aria-label="File handling diagram">
+      <!-- Simple self-contained SVG diagram -->
+      <svg viewBox="0 0 980 280" width="100%" height="auto" role="img" aria-label="C# File I/O flow diagram">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0" stop-color="#7dd3fc" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#a78bfa" stop-opacity=".9"/>
+          </linearGradient>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".25"/>
+          </filter>
+        </defs>
+
+        <rect x="20" y="20" width="940" height="240" rx="18" fill="rgba(15,33,61,.45)" stroke="rgba(255,255,255,.10)"/>
+        
+        <rect x="70" y="70" width="240" height="140" rx="16" fill="rgba(11,16,32,.75)" stroke="rgba(125,211,252,.35)" filter="url(#shadow)"/>
+        <text x="190" y="105" fill="#e9eef9" font-size="18" text-anchor="middle" font-family="system-ui,Segoe UI">Your C# App</text>
+        <text x="190" y="135" fill="#b8c2d9" font-size="13" text-anchor="middle" font-family="system-ui,Segoe UI">Console / Web / Service</text>
+        <text x="190" y="165" fill="#b8c2d9" font-size="13" text-anchor="middle" font-family="system-ui,Segoe UI">Reads & Writes</text>
+        
+        <rect x="365" y="70" width="250" height="140" rx="16" fill="rgba(11,16,32,.75)" stroke="rgba(167,139,250,.35)" filter="url(#shadow)"/>
+        <text x="490" y="105" fill="#e9eef9" font-size="18" text-anchor="middle" font-family="system-ui,Segoe UI">System.IO APIs</text>
+        <text x="490" y="135" fill="#b8c2d9" font-size="13" text-anchor="middle" font-family="ui-monospace,Consolas">File / Directory / Path</text>
+        <text x="490" y="160" fill="#b8c2d9" font-size="13" text-anchor="middle" font-family="ui-monospace,Consolas">StreamReader / StreamWriter</text>
+        <text x="490" y="185" fill="#b8c2d9" font-size="13" text-anchor="middle" font-family="ui-monospace,Consolas">FileStream</text>
+
+        <rect x="670" y="70" width="240" height="140" rx="16" fill="rgba(11,16,32,.75)" stroke="rgba(52,211,153,.35)" filter="url(#shadow)"/>
+        <text x="790" y="105" fill="#e9eef9" font-size="18" text-anchor="middle" font-family="system-ui,Segoe UI">File System</text>
+        <text x="790" y="135" fill="#b8c2d9" font-size="13" text-anchor="middle" font-family="system-ui,Segoe UI">Files / Folders</text>
+        <text x="790" y="160" fill="#b8c2d9" font-size="13" text-anchor="middle" font-family="system-ui,Segoe UI">C:\\Reports\\a.txt</text>
+        <text x="790" y="185" fill="#b8c2d9" font-size="13" text-anchor="middle" font-family="system-ui,Segoe UI">/Users/.../data.json</text>
+
+        <!-- arrows -->
+        <path d="M310 140 L365 140" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+        <polygon points="365,140 350,132 350,148" fill="#a78bfa"/>
+        <path d="M615 140 L670 140" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+        <polygon points="670,140 655,132 655,148" fill="#7dd3fc"/>
+        
+        <text x="337" y="120" fill="#b8c2d9" font-size="12" text-anchor="middle" font-family="system-ui,Segoe UI">calls</text>
+        <text x="642" y="120" fill="#b8c2d9" font-size="12" text-anchor="middle" font-family="system-ui,Segoe UI">reads/writes</text>
+      </svg>
+    </div>
+
+    <div class="note">
+      <b>Important concept:</b> Your app does not “store data inside C#”. It asks the OS to store data on disk using System.IO APIs.
+    </div>
+  </section>
+
+  <section id="when">
+    <h2>2) When do we use files in real life?</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Common real-world uses</h3>
+        <ul>
+          <li><b>Logs:</b> Save application logs to a text file</li>
+          <li><b>Reports:</b> Export report as CSV/TXT</li>
+          <li><b>Configuration:</b> Read settings from JSON</li>
+          <li><b>Backups:</b> Copy important files to a safe folder</li>
+          <li><b>Uploads:</b> Save uploaded files (web apps)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Typical interview / assessment tasks</h3>
+        <ul>
+          <li>Read a text file and count words/frequency</li>
+          <li>Write results to an output file</li>
+          <li>Append logs with timestamps</li>
+          <li>Handle file-not-found & invalid paths</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="core">
+    <h2>3) Core classes in <span class="kbd">System.IO</span></h2>
+    <table class="table">
+      <thead>
+        <tr><th>Class</th><th>What it does (simple)</th><th>When to use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><b>File</b></td><td>Static helper methods for quick read/write/copy/delete</td><td>Fast tasks, small scripts</td></tr>
+        <tr><td><b>FileInfo</b></td><td>Instance-based file operations + metadata</td><td>When you keep working with same file</td></tr>
+        <tr><td><b>Directory</b></td><td>Create/delete/list folders</td><td>Working with folders</td></tr>
+        <tr><td><b>DirectoryInfo</b></td><td>Instance-based folder operations</td><td>Repeated folder operations</td></tr>
+        <tr><td><b>Path</b></td><td>Combine paths, get extensions, filename, etc.</td><td>Safe path building</td></tr>
+        <tr><td><b>Stream</b></td><td>Base type for reading/writing bytes</td><td>Large files, custom formats</td></tr>
+        <tr><td><b>StreamReader/StreamWriter</b></td><td>Read/write text using streams</td><td>Efficient text processing</td></tr>
+        <tr><td><b>FileStream</b></td><td>Low-level stream for files</td><td>Performance + large files</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note good">
+      <b>Fresher rule:</b> Start with <span class="kbd">File</span> for most tasks. Learn streams when files become large or you need more control.
+    </div>
+  </section>
+
+  <section id="paths">
+    <h2>4) Paths + Working Directory (very important)</h2>
+    <p class="hl">
+      When you write code like <span class="kbd">"data.txt"</span>, it means “data.txt in the current working directory”.
+      In exams and real apps, it is safer to use a full path or use <span class="kbd">AppContext.BaseDirectory</span>.
+    </p>
+
+    <div class="code-title"><span>Example: build a safe path</span><span class="badge">Recommended</span></div>
+    <pre><code>using System;
+using System.IO;
+
+string baseDir = AppContext.BaseDirectory;
+string filePath = Path.Combine(baseDir, "data.txt");
+
+Console.WriteLine(filePath);</code></pre>
+
+    <div class="note warn">
+      <b>Common mistake:</b> Using hard-coded paths like <span class="kbd">C:\temp\data.txt</span> works only on your machine.
+      Use <span class="kbd">Path.Combine</span> and let Windows/Linux/Mac handle separators.
+    </div>
+  </section>
+
+  <section id="text">
+    <h2>5) Read/Write Text Files (using <span class="kbd">File</span>)</h2>
+
+    <h3>5.1 Write all text (create/overwrite)</h3>
+    <pre><code>using System;
+using System.IO;
+
+string filePath = Path.Combine(AppContext.BaseDirectory, "notes.txt");
+File.WriteAllText(filePath, "Hello!\nThis is written by C#.\n");
+
+Console.WriteLine("Written successfully.");</code></pre>
+
+    <h3>5.2 Read all text</h3>
+    <pre><code>using System;
+using System.IO;
+
+string filePath = Path.Combine(AppContext.BaseDirectory, "notes.txt");
+string content = File.ReadAllText(filePath);
+
+Console.WriteLine("File Content:");
+Console.WriteLine(content);</code></pre>
+
+    <h3>5.3 Append text (add at end)</h3>
+    <pre><code>using System;
+using System.IO;
+
+string filePath = Path.Combine(AppContext.BaseDirectory, "notes.txt");
+File.AppendAllText(filePath, $"Log at {DateTime.Now:HH:mm:ss}\n");
+
+Console.WriteLine("Appended successfully.");</code></pre>
+
+    <div class="note good">
+      <b>Exam tip:</b> For small files, <span class="kbd">ReadAllText</span> / <span class="kbd">WriteAllText</span> is simplest.
+      For large files, use <span class="kbd">StreamReader</span> to read line-by-line.
+    </div>
+  </section>
+
+  <section id="streams">
+    <h2>6) Streams (StreamReader / StreamWriter)</h2>
+    <p class="hl">
+      Streams are used when you want more control and efficiency. Example: read file line-by-line without loading entire file into memory.
+    </p>
+
+    <h3>6.1 Write using StreamWriter (recommended pattern: using)</h3>
+    <pre><code>using System;
+using System.IO;
+
+string filePath = Path.Combine(AppContext.BaseDirectory, "biglog.txt");
+
+using (var writer = new StreamWriter(filePath, append: true))
+{
+    writer.WriteLine("Line 1");
+    writer.WriteLine("Line 2");
+}
+
+Console.WriteLine("StreamWriter done.");</code></pre>
+
+    <h3>6.2 Read line-by-line using StreamReader</h3>
+    <pre><code>using System;
+using System.IO;
+
+string filePath = Path.Combine(AppContext.BaseDirectory, "biglog.txt");
+
+using (var reader = new StreamReader(filePath))
+{
+    string? line;
+    while ((line = reader.ReadLine()) != null)
+    {
+        Console.WriteLine(line);
+    }
+}</code></pre>
+
+    <div class="note warn">
+      <b>Why “using”?</b> It guarantees the file handle is closed even if an exception happens.
+      Otherwise, the file may remain locked.
+    </div>
+  </section>
+
+  <section id="ops">
+    <h2>7) Copy / Move / Delete + Directory Operations</h2>
+
+    <h3>7.1 Copy a file</h3>
+    <pre><code>using System;
+using System.IO;
+
+string src = Path.Combine(AppContext.BaseDirectory, "notes.txt");
+string dest = Path.Combine(AppContext.BaseDirectory, "backup-notes.txt");
+
+File.Copy(src, dest, overwrite: true);
+Console.WriteLine("Copied to backup.");</code></pre>
+
+    <h3>7.2 Move (rename) a file</h3>
+    <pre><code>using System;
+using System.IO;
+
+string oldPath = Path.Combine(AppContext.BaseDirectory, "backup-notes.txt");
+string newPath = Path.Combine(AppContext.BaseDirectory, "backup-notes-renamed.txt");
+
+File.Move(oldPath, newPath, overwrite: true);
+Console.WriteLine("Moved (renamed).");</code></pre>
+
+    <h3>7.3 Delete a file (safe way)</h3>
+    <pre><code>using System;
+using System.IO;
+
+string filePath = Path.Combine(AppContext.BaseDirectory, "temp.txt");
+
+if (File.Exists(filePath))
+{
+    File.Delete(filePath);
+    Console.WriteLine("Deleted.");
+}
+else
+{
+    Console.WriteLine("File not found, nothing to delete.");
+}</code></pre>
+
+    <h3>7.4 Create folder + list files</h3>
+    <pre><code>using System;
+using System.IO;
+
+string folder = Path.Combine(AppContext.BaseDirectory, "Reports");
+Directory.CreateDirectory(folder);
+
+foreach (var file in Directory.GetFiles(folder))
+{
+    Console.WriteLine(file);
+}</code></pre>
+  </section>
+
+  <section id="errors">
+    <h2>8) Common Errors + Try/Catch (must know)</h2>
+
+    <table class="table">
+      <thead>
+        <tr><th>Error</th><th>Reason</th><th>Fix</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>FileNotFoundException</b></td>
+          <td>File path is wrong / file doesn’t exist</td>
+          <td>Check with <span class="kbd">File.Exists</span></td>
+        </tr>
+        <tr>
+          <td><b>DirectoryNotFoundException</b></td>
+          <td>Folder path doesn’t exist</td>
+          <td>Create folder using <span class="kbd">Directory.CreateDirectory</span></td>
+        </tr>
+        <tr>
+          <td><b>UnauthorizedAccessException</b></td>
+          <td>No permission to access path</td>
+          <td>Use correct folder, run with permissions</td>
+        </tr>
+        <tr>
+          <td><b>IOException</b></td>
+          <td>File is locked / in use / disk issues</td>
+          <td>Close stream, retry, use “using”</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="code-title"><span>Example: safe read with try/catch</span><span class="badge">Exam-ready</span></div>
+    <pre><code>using System;
+using System.IO;
+
+try
+{
+    string path = Path.Combine(AppContext.BaseDirectory, "data.txt");
+
+    if (!File.Exists(path))
+    {
+        Console.WriteLine("File not found.");
+        return;
+    }
+
+    string text = File.ReadAllText(path);
+    Console.WriteLine(text);
+}
+catch (UnauthorizedAccessException ex)
+{
+    Console.WriteLine("Permission issue: " + ex.Message);
+}
+catch (IOException ex)
+{
+    Console.WriteLine("File I/O issue: " + ex.Message);
+}</code></pre>
+  </section>
+
+  <section id="async">
+    <h2>9) Async File I/O (modern pattern)</h2>
+    <p class="hl">
+      Async file methods keep your app responsive (especially in GUI/web apps), and can improve throughput for I/O-heavy tasks.
+    </p>
+
+    <pre><code>using System;
+using System.IO;
+using System.Threading.Tasks;
+
+string path = Path.Combine(AppContext.BaseDirectory, "async.txt");
+await File.WriteAllTextAsync(path, "Saved using async method!\n");
+string read = await File.ReadAllTextAsync(path);
+
+Console.WriteLine(read);</code></pre>
+
+    <div class="note good">
+      <b>Exam hint:</b> If your question says “large files” or “do not block”, mention <span class="kbd">ReadAllTextAsync</span> / <span class="kbd">StreamReader.ReadLineAsync</span>.
+    </div>
+  </section>
+
+  <section id="best">
+    <h2>10) Best Practices (Professional)</h2>
+    <div class="callout">
+      <div class="hl"><b>1) Always build paths using Path.Combine</b> (avoid hard-coded separators).</div>
+      <div class="hl"><b>2) Use using</b> for streams/writers/readers to close handles safely.</div>
+      <div class="hl"><b>3) Check File.Exists / Directory.Exists</b> before read/delete.</div>
+      <div class="hl"><b>4) Handle exceptions</b> (FileNotFound, UnauthorizedAccess, IOException).</div>
+      <div class="hl"><b>5) Prefer read-only folders for config</b> and write into app data folders for logs.</div>
+      <div class="hl"><b>6) For big files, read line-by-line</b> (don’t load entire file).</div>
+    </div>
+  </section>
+
+  <section id="ex">
+    <h2>11) Exercises (Beginner → Interview Level)</h2>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>Beginner</h3>
+        <ul>
+          <li>Create a file <span class="kbd">hello.txt</span> and write your name and city.</li>
+          <li>Read the same file and print it.</li>
+          <li>Append current date/time as a log line.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Intermediate</h3>
+        <ul>
+          <li>Read a file line-by-line and count number of lines.</li>
+          <li>Copy the file into a folder called <span class="kbd">Backup</span>.</li>
+          <li>Rename the copied file to include today’s date.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3>Hard / Interview style</h3>
+      <ul>
+        <li>Read a text file and build a word frequency dictionary. Save output in another file.</li>
+        <li>Find the largest line length in a file (memory-efficient).</li>
+        <li>Create a log writer that writes errors into <span class="kbd">errors.log</span> and closes stream correctly.</li>
+      </ul>
+      <div class="note warn">
+        <b>Extra challenge:</b> Implement the hard tasks using async methods and show progress using <span class="kbd">IProgress&lt;int&gt;</span>.
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div><b>Tip for students:</b> Practice by creating a folder on your desktop, run the program, and observe created files.</div>
+    <div style="margin-top:8px;">Built as W3School+ styled HTML notes for freshers.</div>
+  </div>
+</main>
+
+<script>
+  // Auto-highlight current section in view (simple intersection observer)
+  const sections = [...document.querySelectorAll('section')];
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        sections.forEach(s => s.classList.remove('active-section'));
+        e.target.classList.add('active-section');
+      }
+    });
+  }, { root: null, threshold: 0.22 });
+
+  sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>

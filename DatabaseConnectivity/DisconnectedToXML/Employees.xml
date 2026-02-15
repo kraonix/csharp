@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Employees>
+    <Id>1</Id>
+    <Name>Sachin</Name>
+    <Salary>502.00</Salary>
+    <DeptId>1</DeptId>
+  </Employees>
+  <Employees>
+    <Id>2</Id>
+    <Name>Sahil</Name>
+    <Salary>50.00</Salary>
+    <DeptId>2</DeptId>
+  </Employees>
+  <Employees>
+    <Id>3</Id>
+    <Name>Anuska</Name>
+    <Salary>23000.00</Salary>
+    <DeptId>3</DeptId>
+  </Employees>
+  <Employees>
+    <Id>4</Id>
+    <Name>Sneha</Name>
+    <Salary>2000000.00</Salary>
+    <DeptId>1</DeptId>
+  </Employees>
+  <Employees>
+    <Id>5</Id>
+    <Name>Raj</Name>
+    <Salary>75000.00</Salary>
+    <DeptId>2</DeptId>
+  </Employees>
+</NewDataSet>

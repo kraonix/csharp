@@ -1,0 +1,25 @@
+@model List<StudentApp.Models.Student>
+
+<h2>Student List</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Add Student</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Age</td>
+                <td>@student.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>

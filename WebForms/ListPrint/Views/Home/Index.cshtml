@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    ViewData["LeftSideBar"] = "Left Side bar";
+    ViewData["ArrayView"] = new string[] { "Index1", "Index2", "Index3" };
+}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- LEFT SIDEBAR -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar min-vh-50 p-3 ml-0">
+            <h5 class="text-white mb-4">@ViewData["LeftSideBar"]</h5>
+        </nav>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="col-md-6 col-lg-8 p-4">
+            <div class="text-center">
+                <h1 class="display-6">@ViewData["Title"]</h1>
+
+                <hr />
+                @for (int i = 0; i < ViewBag.myVariableList.Length; i++)
+                {
+                    <p class="list-group-item p-5 card mb-4">@ViewBag.myVariableList[i]</p>
+                }
+
+            </div>
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <nav class="col-md-3 col-lg-2 bg-light min-vh-100 p-3 mr-0">
+            @{
+                var items = ViewData["ArrayView"] as string[];
+            }
+
+            @if (items != null && items.Length > 0)
+            {
+                <ul class="list-group text-center">
+                    @foreach (var item in items)
+                    {
+                        <marquee behavior="scroll" direction="left" scrollamount="3">
+                        <li class="list-group-item p-5 card mb-4">@item</li>
+                        </marquee>
+                    }
+                </ul>
+            }
+        </nav>
+    </div>
+</div>

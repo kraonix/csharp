@@ -1,0 +1,27 @@
+@model Department
+
+<div class="container mt-5">
+    <div class="card shadow-sm col-md-6 mx-auto">
+        <div class="card-body">
+            <h4 class="mb-4 fw-bold">Create Department</h4>
+
+            <form asp-controller="Department"
+                  asp-action="Create"
+                  method="post">
+
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" placeholder="Enter department name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Save Department
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>

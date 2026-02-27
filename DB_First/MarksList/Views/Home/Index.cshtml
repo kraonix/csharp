@@ -1,0 +1,67 @@
+﻿@model MarksList.Models.MarksDashboardViewModel
+
+@{
+    ViewData["Title"] = "Marks Dashboard";
+}
+
+<div class="container py-5">
+
+    <h2 class="fw-bold mb-4">Marks Dashboard</h2>
+
+    <!-- Average Cards -->
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-4 p-4 text-center">
+                <h6 class="text-muted">Average Marks 1</h6>
+                <h2 class="fw-bold text-primary">
+                    @Model.AvgMarks1.ToString("F2")
+                </h2>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-4 p-4 text-center">
+                <h6 class="text-muted">Average Marks 2</h6>
+                <h2 class="fw-bold text-success">
+                    @Model.AvgMarks2.ToString("F2")
+                </h2>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Table -->
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body">
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>#</th>
+                            <th>Marks 1</th>
+                            <th>Marks 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int count = 1;
+                        }
+                        @foreach (var mark in Model.AllMarks)
+                        {
+                            <tr>
+                                <td>@count</td>
+                                <td>@mark.Marks1</td>
+                                <td>@mark.Marks2</td>
+                            </tr>
+                            count++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+@model DbFirstDemo.Models.Employees
+
+<div class="container py-5">
+    <h2 class="fw-bold mb-4">Edit Employee</h2>
+
+    <div class="card shadow-lg rounded-4 border-0 p-4">
+
+        <form asp-action="Edit">
+
+            <input type="hidden" asp-for="EmployeeID" />
+
+            <!-- Same fields as Create -->
+
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input asp-for="FirstName" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input asp-for="LastName" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Department</label>
+                <select asp-for="DepartmentID" class="form-select"
+                        asp-items="@(new SelectList(ViewBag.Departments, "DepartmentID", "DepartmentName"))">
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Salary</label>
+                <input asp-for="Salary" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Hire Date</label>
+                <input asp-for="HireDate" type="date" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+        </form>
+
+    </div>
+</div>

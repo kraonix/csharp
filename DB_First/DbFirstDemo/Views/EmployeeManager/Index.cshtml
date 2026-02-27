@@ -1,0 +1,56 @@
+@model IEnumerable<DbFirstDemo.Models.Employees>
+
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between mb-4">
+        <h2 class="fw-bold">Employee Manager</h2>
+        <a asp-action="Create" class="btn btn-success shadow-sm">
+            + Add Employee
+        </a>
+    </div>
+
+    <div class="card shadow-lg rounded-4 border-0">
+        <div class="card-body">
+
+            <table class="table table-hover align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Hire Date</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var emp in Model)
+                    {
+                        <tr>
+                            <td>@emp.EmployeeID</td>
+                            <td>@emp.FirstName @emp.LastName</td>
+                            <td>@emp.Department?.DepartmentName</td>
+                            <td>₹ @emp.Salary</td>
+                            <td>@emp.HireDate</td>
+
+                            <td class="text-end">
+                                <a asp-action="Edit" asp-route-id="@emp.EmployeeID"
+                                   class="btn btn-sm btn-outline-primary me-2">
+                                    Edit
+                                </a>
+
+                                <a asp-action="Delete" asp-route-id="@emp.EmployeeID"
+                                   class="btn btn-sm btn-outline-danger"
+                                   onclick="return confirm('Are you sure?');">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>

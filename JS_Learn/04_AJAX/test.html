@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mock API AJAX Dropdown</title>
+</head>
+
+<body>
+
+    <h2>Todos From Mock API</h2>
+
+    <button id="loadBtn">Load Todos</button>
+
+    <br><br>
+
+    <select id="todoDropdown">
+        <option value="">-- Select Todo --</option>
+    </select>
+
+    <script>
+
+        document.getElementById("loadBtn").addEventListener("click", function () {
+
+            const xhr = new XMLHttpRequest();
+
+            xhr.onload = function () {
+
+                if (xhr.status >= 200 && xhr.status < 300) {
+
+                    const data = JSON.parse(xhr.responseText);
+
+                    const dropdown = document.getElementById("todoDropdown");
+
+                    // Clear old options except first default one
+                    dropdown.innerHTML = `<option value="">-- Select Todo --</option>`;
+
+                    // Show only first 20 todos
+                    data.slice(0, 20).forEach(todo => {
+
+                        const option = document.createElement("option");
+
+                        option.value = todo.id;
+                        option.textContent =
+                            `${todo.title} (${todo.completed ? "Completed" : "Pending"})`;
+
+                        dropdown.appendChild(option);
+                    });
+
+                } else {
+                    alert(`Error ${xhr.status}: ${xhr.statusText}`);
+                }
+            };
+
+            xhr.onerror = function () {
+                alert("Network error occurred");
+            };
+
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+            xhr.send();
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+@model IEnumerable<LibraryApp.Models.Book>
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">📚 Library Books</h2>
+
+        <a asp-action="Create" class="btn btn-primary">
+            + Add Book
+        </a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <table class="table table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.BookId</td>
+                        <td class="fw-semibold">@book.Title</td>
+                        <td>@book.Author</td>
+                        <td>₹@book.Price</td>
+
+                        <td class="text-center">
+                            <a asp-action="Details"
+                               asp-route-id="@book.BookId"
+                               class="btn btn-sm btn-info text-white">
+                               Details
+                            </a>
+
+                            <a asp-action="Delete"
+                               asp-route-id="@book.BookId"
+                               class="btn btn-sm btn-danger">
+                               Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+</div>

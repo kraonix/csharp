@@ -1,0 +1,44 @@
+@model LibraryApp.Models.Book
+
+<div class="container mt-5">
+
+    <div class="card shadow-sm col-md-6 mx-auto">
+        <div class="card-body">
+
+            <h3 class="mb-4 text-center">Add New Book</h3>
+
+            <form asp-action="Create" method="post">
+
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input asp-for="Title" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Author</label>
+                    <input asp-for="Author" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Price</label>
+                    <input asp-for="Price" class="form-control" />
+                </div>
+
+                <div class="d-flex justify-content-between">
+
+                    <a asp-action="List" class="btn btn-secondary">
+                        Back
+                    </a>
+
+                    <button type="submit" class="btn btn-success">
+                        Save Book
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

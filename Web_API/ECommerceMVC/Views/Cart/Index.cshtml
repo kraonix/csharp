@@ -1,0 +1,36 @@
+@model List<CartItem>
+
+<h2 class="mb-4">Shopping Cart</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">Your cart is empty.</div>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Product ID</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.Quantity</td>
+                    <td>
+                        <form method="post" asp-action="Remove" asp-route-id="@item.Id">
+                            <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<a href="/Products" class="btn btn-secondary">Continue Shopping</a>

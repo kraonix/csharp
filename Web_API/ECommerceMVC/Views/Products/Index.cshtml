@@ -1,0 +1,37 @@
+@model List<ECommerceMVC.Models.Product>
+
+<h2 class="mb-4">Products</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<div class="row">
+@foreach(var item in Model)
+{
+    <div class="col-md-4">
+        <div class="card shadow-lg mb-4">
+            <div class="card-body">
+
+                <h4>@item.Name</h4>
+
+                <p>Category: @item.Category</p>
+
+                <h5>₹@item.Price</h5>
+
+                <p>Stock: @item.Stock</p>
+
+                <form method="post" asp-controller="Cart" asp-action="AddToCart">
+                    <input type="hidden" name="productId" value="@item.Id" />
+                    <input type="hidden" name="quantity" value="1" />
+                    <button type="submit" class="btn btn-success w-100">
+                        Add to Cart
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+}
+</div>

@@ -1,0 +1,32 @@
+@model List<StudentPortal_MVC.Models.Enrollment>
+
+<h3>Enrollments</h3>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Status</th>
+            <th>Paid</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.EnrollmentId</td>
+                <td>@e.StudentId</td>
+                <td>@e.CourseId</td>
+                <td>@e.PaymentStatus</td>
+                <td>₹@e.PaidAmount</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

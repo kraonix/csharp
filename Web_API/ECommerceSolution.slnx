@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="ApiGateway/ApiGateway.csproj" Id="316d71ca-af2a-4771-8671-6e144829ca20" />
+  <Project Path="CartServiceAPI/CartServiceAPI.csproj" />
+  <Project Path="ECommerceMVC/ECommerceMVC.csproj" />
+  <Project Path="OrderServiceAPI/OrderServiceAPI.csproj" />
+  <Project Path="PaymentServiceAPI/PaymentServiceAPI.csproj" />
+  <Project Path="ProductServiceAPI/ProductServiceAPI.csproj" />
+  <Project Path="UserService/UserService.csproj" />
+</Solution>

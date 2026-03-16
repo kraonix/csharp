@@ -1,0 +1,36 @@
+@model List<StudentPortal_MVC.Models.Course>
+
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Duration</th>
+            <th>Fee</th>
+            <th>Level</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.CourseId</td>
+                <td>@c.Title</td>
+                <td>@c.DurationDays days</td>
+                <td>₹@c.Fee</td>
+                <td>@c.Level</td>
+                <td>
+                    <a class="btn btn-danger btn-sm" href="/Course/Delete/@c.CourseId">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

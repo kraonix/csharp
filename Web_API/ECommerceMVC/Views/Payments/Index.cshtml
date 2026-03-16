@@ -1,0 +1,38 @@
+@model List<Payment>
+
+<h2 class="mb-4">Payments</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">No payments found.</div>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Order ID</th>
+                <th>Amount</th>
+                <th>Method</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var payment in Model)
+            {
+                <tr>
+                    <td>@payment.Id</td>
+                    <td>@payment.OrderId</td>
+                    <td>₹@payment.Amount</td>
+                    <td>@payment.Method</td>
+                    <td>
+                        <span class="badge @(payment.Status == "Success" ? "bg-success" : "bg-danger")">
+                            @payment.Status
+                        </span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

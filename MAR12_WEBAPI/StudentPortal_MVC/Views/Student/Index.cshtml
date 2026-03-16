@@ -1,0 +1,32 @@
+@model List<StudentPortal_MVC.Models.Student>
+
+<h3>Students</h3>
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.StudentId</td>
+                <td>@s.FullName</td>
+                <td>@s.Email</td>
+                <td>@s.Phone</td>
+                <td>@s.Status</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

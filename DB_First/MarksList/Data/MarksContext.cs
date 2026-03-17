@@ -11,8 +11,7 @@ public partial class MarksContext : DbContext
     {
     }
 
-    public MarksContext(DbContextOptions<MarksContext> options)
-        : base(options)
+    public MarksContext(DbContextOptions<MarksContext> options) : base(options)
     {
     }
 

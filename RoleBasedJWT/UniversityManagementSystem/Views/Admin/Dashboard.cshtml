@@ -1,0 +1,136 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .dashboard-header {
+        background: linear-gradient(135deg, #4f46e5, #9333ea);
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .card-custom {
+        border: none;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+
+    .card-custom:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+
+    .quick-action {
+        border-radius: 12px;
+        padding: 15px;
+        background: #f8f9fa;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    .quick-action:hover {
+        background: #e2e6ea;
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="container mt-4">
+
+    <!-- 🔥 HEADER -->
+    <div class="dashboard-header mb-4">
+        <h2>Admin Dashboard 🚀</h2>
+        <p>Manage users, requests and system overview</p>
+    </div>
+
+    <!-- 🔥 QUICK ACTIONS -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <a href="/Admin/Requests" class="text-decoration-none text-dark">
+                <div class="quick-action shadow-sm">
+                    📥 <br />
+                    <strong>View Requests</strong>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <a href="/Admin/Users" class="text-decoration-none text-dark">
+                <div class="quick-action shadow-sm">
+                    👥 <br />
+                    <strong>Manage Users</strong>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-3">
+            <div class="quick-action shadow-sm">
+                📊 <br />
+                <strong>Analytics</strong>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="quick-action shadow-sm">
+                ⚙️ <br />
+                <strong>Settings</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔥 STATS CARDS -->
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card card-custom shadow p-4 bg-primary text-white">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Total Users</h6>
+                        <h2>@ViewBag.TotalUsers</h2>
+                    </div>
+                    <div class="icon">👥</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-custom shadow p-4 bg-success text-white">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Faculty</h6>
+                        <h2>@ViewBag.Faculty</h2>
+                    </div>
+                    <div class="icon">👨‍🏫</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card card-custom shadow p-4 bg-warning text-dark">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Students</h6>
+                        <h2>@ViewBag.Students</h2>
+                    </div>
+                    <div class="icon">👨‍🎓</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 🔥 EXTRA SECTION -->
+    <div class="mt-5">
+        <h4>System Overview</h4>
+        <div class="card shadow p-4 mt-3">
+            <p>✔ Role-based authentication active</p>
+            <p>✔ User approval system running</p>
+            <p>✔ JWT authentication enabled</p>
+        </div>
+    </div>
+
+</div>

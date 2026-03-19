@@ -1,0 +1,23 @@
+@model List<Course>
+
+<h2>Available Courses</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var course in Model)
+    {
+        <tr>
+            <td>@course.Name</td>
+            <td>
+                <form asp-action="Enroll" method="post">
+                    <input type="hidden" name="courseId" value="@course.Id" />
+                    <button class="btn btn-success">Enroll</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

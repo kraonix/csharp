@@ -1,0 +1,113 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .dashboard-header {
+        background: linear-gradient(135deg, #059669, #10b981);
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .card-custom {
+        border: none;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+
+    .card-custom:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .icon {
+        font-size: 28px;
+    }
+
+    .quick-action {
+        border-radius: 12px;
+        padding: 15px;
+        background: #f8f9fa;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    .quick-action:hover {
+        background: #e2e6ea;
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="container mt-4">
+
+    <!-- 🔥 HEADER -->
+    <div class="dashboard-header mb-4">
+        <h2>Faculty Dashboard 👨‍🏫</h2>
+        <p>Manage courses, students, and assignments</p>
+    </div>
+
+    <!-- 🔥 QUICK ACTIONS -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="quick-action shadow-sm">
+                📚 <br />
+                <strong>My Courses</strong>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="quick-action shadow-sm">
+                📝 <br />
+                <strong>Create Assignment</strong>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="quick-action shadow-sm">
+                📊 <br />
+                <strong>View Submissions</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔥 STATS -->
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card card-custom shadow p-4 bg-success text-white">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Your Courses</h6>
+                        <h2>@ViewBag.Courses</h2>
+                    </div>
+                    <div class="icon">📚</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card card-custom shadow p-4 bg-info text-white">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <h6>Total Students</h6>
+                        <h2>@ViewBag.Students</h2>
+                    </div>
+                    <div class="icon">👨‍🎓</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 🔥 EXTRA SECTION -->
+    <div class="mt-5">
+        <h4>Teaching Overview</h4>
+        <div class="card shadow p-4 mt-3">
+            <p>✔ Manage your assigned courses</p>
+            <p>✔ Upload assignments and materials</p>
+            <p>✔ Track student submissions</p>
+        </div>
+    </div>
+
+</div>

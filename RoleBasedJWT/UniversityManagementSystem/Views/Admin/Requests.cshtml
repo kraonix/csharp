@@ -1,0 +1,25 @@
+@model List<UserRequest>
+
+<h2>Pending Requests</h2>
+
+<table class="table">
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Action</th>
+</tr>
+
+@foreach (var r in Model)
+{
+    <tr>
+        <td>@r.FullName</td>
+        <td>@r.Email</td>
+        <td>@r.Role</td>
+        <td>
+            <a href="/Admin/Approve/@r.Id" class="btn btn-success">Approve</a>
+            <a href="/Admin/DeleteRequest/@r.Id" class="btn btn-danger">Reject</a>
+        </td>
+    </tr>
+}
+</table>

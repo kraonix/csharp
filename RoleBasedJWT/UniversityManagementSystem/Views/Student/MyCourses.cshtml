@@ -1,0 +1,18 @@
+@model List<Enrollment>
+
+<h2>My Courses</h2>
+
+<table class="table">
+    <tr>
+        <th>Course</th>
+        <th>Grade</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Course.Name</td>
+            <td>@(item.Grade ?? "Not Graded")</td>
+        </tr>
+    }
+</table>

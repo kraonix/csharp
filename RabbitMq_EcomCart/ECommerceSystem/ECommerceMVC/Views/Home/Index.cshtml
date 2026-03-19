@@ -1,0 +1,65 @@
+@model List<Shared.Models.Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="container py-5">
+    <!-- Hero Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold" style="color: #4f46e5;">
+            <i class="bi bi-bag-heart me-2"></i>Our Products
+        </h1>
+        <p class="lead text-muted">Discover our premium tech collection. Click "Add to Cart" to start shopping!</p>
+    </div>
+
+    <!-- Alerts -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>@TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>@TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <!-- Product Grid -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: 16px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;"
+                     onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(99,102,241,0.18)'"
+                     onmouseout="this.style.transform='';this.style.boxShadow=''">
+                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;" />
+                    <div class="card-body d-flex flex-column p-4">
+                        <h5 class="card-title fw-bold mb-1">@product.Name</h5>
+                        <p class="card-text text-muted small mb-3">@product.Description</p>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="fs-4 fw-bold" style="color: #4f46e5;">₹@product.Price.ToString("N0")</span>
+                                <form asp-controller="Home" asp-action="AddToCart" method="post">
+                                    <input type="hidden" name="productId" value="@product.Id" />
+                                    <button type="submit" class="btn btn-primary px-4 py-2">
+                                        <i class="bi bi-cart-plus me-1"></i>Add to Cart
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Info Banner -->
+    <div class="mt-5 p-4 rounded-3 text-white text-center" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+        <i class="bi bi-info-circle me-2"></i>
+        This shop uses <strong>RabbitMQ</strong> for all cart &amp; payment operations. Each "Add to Cart" publishes a message to <code>cart_queue</code>.
+    </div>
+</div>

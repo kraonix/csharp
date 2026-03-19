@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Payment Success";
+    var orderId = ViewBag.OrderId ?? "N/A";
+    var total = ViewBag.Total ?? "0.00";
+    var itemCount = ViewBag.ItemCount ?? "0";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <!-- Success Card -->
+            <div class="card border-0 shadow text-center" style="border-radius: 24px; overflow: hidden;">
+                <!-- Green Header -->
+                <div class="card-header border-0 py-5" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    <div class="display-1 mb-2">✅</div>
+                    <h2 class="text-white fw-bold mb-1">Payment Successful!</h2>
+                    <p class="text-white opacity-75 mb-0">Your order has been placed and processed via RabbitMQ</p>
+                </div>
+
+                <div class="card-body p-5">
+                    <div class="row g-3 mb-4">
+                        <div class="col-4">
+                            <div class="p-3 rounded-3" style="background: #f0fdf4;">
+                                <div class="small text-muted mb-1">Order ID</div>
+                                <div class="fw-bold" style="color: #059669; font-size: 0.9rem;">@orderId</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 rounded-3" style="background: #eff6ff;">
+                                <div class="small text-muted mb-1">Total Paid</div>
+                                <div class="fw-bold" style="color: #4f46e5;">₹@total</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 rounded-3" style="background: #fdf4ff;">
+                                <div class="small text-muted mb-1">Items</div>
+                                <div class="fw-bold" style="color: #7c3aed;">@itemCount</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RabbitMQ Flow Info -->
+                    <div class="p-3 rounded-3 mb-4 text-start" style="background: #fafafa; border: 1px solid #e5e7eb;">
+                        <h6 class="fw-semibold mb-2"><i class="bi bi-diagram-3 me-2" style="color: #6366f1;"></i>Message Flow</h6>
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="badge me-2" style="background: #6366f1;">MVC</span>
+                            <span class="small text-muted">→ Published to <code>payment_queue</code></span>
+                            <span class="ms-auto badge bg-success">✓ Done</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="badge me-2" style="background: #8b5cf6;">PaymentApi</span>
+                            <span class="small text-muted">→ Consumed &amp; Processed by BackgroundService</span>
+                            <span class="ms-auto badge bg-success">✓ Done</span>
+                        </div>
+                    </div>
+
+                    <a href="/" class="btn btn-primary px-5 py-2 me-2" style="border-radius: 10px;">
+                        <i class="bi bi-bag me-1"></i>Shop More
+                    </a>
+                    <a href="/Cart" class="btn btn-outline-secondary px-4 py-2" style="border-radius: 10px;">
+                        <i class="bi bi-cart me-1"></i>View Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

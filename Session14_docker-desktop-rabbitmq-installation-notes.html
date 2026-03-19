@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docker Desktop and RabbitMQ Installation Guide for .NET</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --primary:#0f766e;
+      --primary2:#0ea5e9;
+      --border:#dbe4ee;
+      --code:#0b1220;
+      --soft:#ecfeff;
+      --warn:#fff7ed;
+      --ok:#ecfdf5;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Segoe UI, Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:32px 20px 60px;
+    }
+    .hero{
+      background:linear-gradient(135deg,#0f766e,#0ea5e9);
+      color:#fff;
+      padding:32px;
+      border-radius:22px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+      margin-bottom:24px;
+    }
+    .hero h1{margin:0 0 10px;font-size:34px}
+    .hero p{margin:6px 0;color:#eefcff}
+    .grid{
+      display:grid;
+      grid-template-columns:280px 1fr;
+      gap:22px;
+      align-items:start;
+    }
+    .toc,.card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow:0 6px 18px rgba(15,23,42,.05);
+    }
+    .toc{
+      position:sticky;
+      top:18px;
+      padding:18px;
+    }
+    .toc h3{margin-top:0}
+    .toc a{
+      display:block;
+      text-decoration:none;
+      color:var(--text);
+      padding:7px 8px;
+      border-radius:10px;
+      margin:3px 0;
+    }
+    .toc a:hover{background:#f0fdfa;color:var(--primary)}
+    .card{
+      padding:24px;
+      margin-bottom:18px;
+    }
+    h2{
+      margin-top:0;
+      color:#0f172a;
+      font-size:28px;
+      border-bottom:2px solid #e5eef6;
+      padding-bottom:8px;
+    }
+    h3{color:#0f766e;margin-top:22px}
+    h4{margin-bottom:8px}
+    .tag{
+      display:inline-block;
+      padding:5px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+      margin-right:8px;
+      margin-bottom:8px;
+      background:#e0f2fe;
+      color:#075985;
+    }
+    .note,.warn,.ok{
+      padding:14px 16px;
+      border-radius:14px;
+      margin:14px 0;
+      border:1px solid var(--border);
+    }
+    .note{background:var(--soft)}
+    .warn{background:var(--warn); border-color:#fed7aa}
+    .ok{background:var(--ok); border-color:#bbf7d0}
+    pre{
+      background:var(--code);
+      color:#e5eefc;
+      padding:14px;
+      border-radius:14px;
+      overflow:auto;
+      font-size:14px;
+      white-space:pre-wrap;
+      word-break:break-word;
+    }
+    code{
+      font-family:Consolas, "Courier New", monospace;
+    }
+    ul,ol{padding-left:22px}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:12px 0;
+      overflow:hidden;
+      border-radius:14px;
+    }
+    th,td{
+      border:1px solid var(--border);
+      padding:12px;
+      text-align:left;
+      vertical-align:top;
+    }
+    th{background:#eff6ff}
+    .footer{
+      color:var(--muted);
+      font-size:14px;
+      padding-top:10px;
+    }
+    .small{font-size:14px;color:var(--muted)}
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+      .toc{position:static}
+      .hero h1{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="tag">Docker Desktop</div>
+      <div class="tag">RabbitMQ</div>
+      <div class="tag">Windows</div>
+      <div class="tag">.NET</div>
+      <h1>Complete Notes: Docker Desktop Installation with RabbitMQ Installation for .NET</h1>
+      <p>This guide explains how to install Docker Desktop on Windows, run RabbitMQ using Docker, access the RabbitMQ Management UI, test queues, and connect from a .NET application.</p>
+      <p><strong>Best for:</strong> Freshers, .NET learners, backend developers, and anyone starting message queue practice using RabbitMQ.</p>
+    </section>
+
+    <div class="grid">
+      <aside class="toc">
+        <h3>Contents</h3>
+        <a href="#intro">1. Introduction</a>
+        <a href="#why">2. Why use Docker + RabbitMQ</a>
+        <a href="#prereq">3. Prerequisites</a>
+        <a href="#docker-install">4. Install Docker Desktop</a>
+        <a href="#verify-docker">5. Verify Docker</a>
+        <a href="#rabbitmq-run">6. Run RabbitMQ in Docker</a>
+        <a href="#rabbitmq-ui">7. Open Management UI</a>
+        <a href="#test-ui">8. Test RabbitMQ from UI</a>
+        <a href="#test-cli">9. Useful Docker commands</a>
+        <a href="#dotnet">10. Connect RabbitMQ with .NET</a>
+        <a href="#troubleshoot">11. Troubleshooting</a>
+        <a href="#faq">12. FAQ</a>
+        <a href="#refs">13. References</a>
+      </aside>
+
+      <main>
+        <section class="card" id="intro">
+          <h2>1. Introduction</h2>
+          <p><strong>RabbitMQ</strong> is a message broker. It helps applications communicate with each other asynchronously. Instead of directly calling another service and waiting, one application can send a message to RabbitMQ, and another application can process it later.</p>
+          <p><strong>Docker Desktop</strong> lets you run applications inside containers on Windows. Running RabbitMQ inside Docker is usually easier than doing a full native installation because you avoid local Erlang setup and can remove/recreate the broker quickly.</p>
+          <div class="note">
+            <strong>Simple idea:</strong> Your .NET application sends a message → RabbitMQ stores it in a queue → another .NET service or worker reads it and processes it.
+          </div>
+        </section>
+
+        <section class="card" id="why">
+          <h2>2. Why use Docker + RabbitMQ</h2>
+          <ul>
+            <li>No need to manually install and manage RabbitMQ dependencies on your machine.</li>
+            <li>Easy to start, stop, remove, and recreate RabbitMQ.</li>
+            <li>Good for learning, testing, local development, and demos.</li>
+            <li>Works well with ASP.NET Core Web API, Worker Service, background jobs, and microservices.</li>
+          </ul>
+
+          <h3>Real-world .NET use cases</h3>
+          <ul>
+            <li>Order placed in an e-commerce app</li>
+            <li>Email notification processing</li>
+            <li>Invoice generation</li>
+            <li>Inventory update</li>
+            <li>Payment event processing</li>
+            <li>Log or audit event handling</li>
+          </ul>
+        </section>
+
+        <section class="card" id="prereq">
+          <h2>3. Prerequisites</h2>
+          <h3>System requirements</h3>
+          <ul>
+            <li>Windows 10 or Windows 11</li>
+            <li>Administrator access for Docker Desktop installation</li>
+            <li>Virtualization enabled in BIOS/UEFI</li>
+            <li>WSL 2 enabled on Windows for Docker Desktop's recommended backend</li>
+            <li>Internet connection to pull Docker images</li>
+          </ul>
+
+          <div class="warn">
+            <strong>Important:</strong> RabbitMQ Docker image runs as a <strong>Linux container</strong>. Docker Desktop should be running in <strong>Linux containers mode</strong>.
+          </div>
+
+          <h3>Ports used by RabbitMQ</h3>
+          <table>
+            <tr>
+              <th>Port</th>
+              <th>Purpose</th>
+            </tr>
+            <tr>
+              <td>5672</td>
+              <td>AMQP client communication from .NET or other applications</td>
+            </tr>
+            <tr>
+              <td>15672</td>
+              <td>RabbitMQ Management UI in browser</td>
+            </tr>
+          </table>
+        </section>
+
+        <section class="card" id="docker-install">
+          <h2>4. Install Docker Desktop on Windows</h2>
+
+          <h3>Step 1: Download Docker Desktop</h3>
+          <p>Download Docker Desktop for Windows from the official Docker website.</p>
+          <div class="note">
+            Open the official Docker Desktop installation page and download the Windows installer.
+          </div>
+
+          <h3>Step 2: Run the installer</h3>
+          <ol>
+            <li>Double-click the downloaded Docker Desktop installer.</li>
+            <li>Proceed with the installation wizard.</li>
+            <li>Keep WSL 2 based engine enabled if shown.</li>
+            <li>Finish installation and restart your machine if prompted.</li>
+          </ol>
+
+          <h3>Step 3: Start Docker Desktop</h3>
+          <ol>
+            <li>Open Docker Desktop from Start Menu.</li>
+            <li>Wait until Docker shows that the engine is running.</li>
+            <li>If prompted, allow required Windows features or WSL setup.</li>
+          </ol>
+
+          <h3>Step 4: Confirm Linux containers</h3>
+          <p>If you previously worked with Windows containers, switch to Linux containers from the Docker tray menu.</p>
+
+          <div class="ok">
+            <strong>Expected result:</strong> Docker Desktop opens successfully and shows the Docker engine as running.
+          </div>
+        </section>
+
+        <section class="card" id="verify-docker">
+          <h2>5. Verify Docker Installation</h2>
+          <p>Open <strong>Command Prompt</strong>, <strong>PowerShell</strong>, or <strong>Windows Terminal</strong> and run:</p>
+
+<pre><code>docker --version
+docker version
+docker info</code></pre>
+
+          <p>You can also test Docker using a sample container:</p>
+
+<pre><code>docker run hello-world</code></pre>
+
+          <div class="note">
+            If this works, Docker is installed and able to download and run containers correctly.
+          </div>
+        </section>
+
+        <section class="card" id="rabbitmq-run">
+          <h2>6. Run RabbitMQ in Docker</h2>
+
+          <h3>RabbitMQ one-line command</h3>
+<pre><code>docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4-management</code></pre>
+
+          <h3>Command explanation</h3>
+          <table>
+            <tr>
+              <th>Part</th>
+              <th>Meaning</th>
+            </tr>
+            <tr>
+              <td><code>-d</code></td>
+              <td>Run container in detached mode (background)</td>
+            </tr>
+            <tr>
+              <td><code>--name rabbitmq</code></td>
+              <td>Container name will be rabbitmq</td>
+            </tr>
+            <tr>
+              <td><code>-p 5672:5672</code></td>
+              <td>Expose AMQP port</td>
+            </tr>
+            <tr>
+              <td><code>-p 15672:15672</code></td>
+              <td>Expose Management UI port</td>
+            </tr>
+            <tr>
+              <td><code>rabbitmq:4-management</code></td>
+              <td>RabbitMQ image with management plugin enabled</td>
+            </tr>
+          </table>
+
+          <h3>Check running containers</h3>
+<pre><code>docker ps</code></pre>
+
+          <h3>See container logs</h3>
+<pre><code>docker logs rabbitmq</code></pre>
+
+          <h3>Stop and start container</h3>
+<pre><code>docker stop rabbitmq
+docker start rabbitmq</code></pre>
+
+          <h3>Remove container</h3>
+<pre><code>docker rm -f rabbitmq</code></pre>
+
+          <div class="warn">
+            If you get an error like <code>no matching manifest for windows/amd64</code>, Docker is likely in Windows containers mode. Switch to Linux containers and run the command again.
+          </div>
+        </section>
+
+        <section class="card" id="rabbitmq-ui">
+          <h2>7. Open RabbitMQ Management UI</h2>
+          <p>Open a browser and go to:</p>
+<pre><code>http://localhost:15672</code></pre>
+
+          <p>Default credentials for a local setup are usually:</p>
+<pre><code>Username: guest
+Password: guest</code></pre>
+
+          <h3>What you can do in the UI</h3>
+          <ul>
+            <li>View queues</li>
+            <li>Create exchanges</li>
+            <li>Publish messages</li>
+            <li>Get messages</li>
+            <li>Monitor connections and channels</li>
+            <li>See queue depth and message rates</li>
+          </ul>
+        </section>
+
+        <section class="card" id="test-ui">
+          <h2>8. Test RabbitMQ from the UI</h2>
+
+          <h3>Step 1: Create a queue</h3>
+          <ol>
+            <li>Login to RabbitMQ Management UI.</li>
+            <li>Open <strong>Queues and Streams</strong>.</li>
+            <li>Click <strong>Add a new queue</strong>.</li>
+            <li>Enter queue name: <code>testqueue</code>.</li>
+            <li>Keep default settings and click <strong>Add queue</strong>.</li>
+          </ol>
+
+          <h3>Step 2: Publish a test message</h3>
+          <ol>
+            <li>Open the <code>testqueue</code>.</li>
+            <li>Go to <strong>Publish message</strong>.</li>
+            <li>Enter payload such as:</li>
+          </ol>
+<pre><code>{"message":"Hello RabbitMQ"}</code></pre>
+          <ol start="4">
+            <li>Click <strong>Publish message</strong>.</li>
+          </ol>
+
+          <h3>Step 3: Read the message</h3>
+          <ol>
+            <li>In the same queue page, find <strong>Get messages</strong>.</li>
+            <li>Click <strong>Get Message(s)</strong>.</li>
+            <li>You should see the message body.</li>
+          </ol>
+
+          <div class="ok">
+            <strong>Success check:</strong> If you can create a queue, publish a message, and retrieve it, RabbitMQ is working properly.
+          </div>
+        </section>
+
+        <section class="card" id="test-cli">
+          <h2>9. Useful Docker Commands for RabbitMQ</h2>
+
+<pre><code>docker ps
+docker logs rabbitmq
+docker inspect rabbitmq
+docker stop rabbitmq
+docker start rabbitmq
+docker restart rabbitmq
+docker rm -f rabbitmq
+docker image ls</code></pre>
+
+          <h3>Optional: Run RabbitMQ with persistent data</h3>
+          <p>If you want queue data to survive container deletion, mount a Docker volume:</p>
+
+<pre><code>docker run -d --name rabbitmq ^
+  -p 5672:5672 ^
+  -p 15672:15672 ^
+  -v rabbitmq_data:/var/lib/rabbitmq ^
+  rabbitmq:4-management</code></pre>
+
+          <p class="small">Use the above multi-line format in Command Prompt. In PowerShell or Git Bash, line continuation differs, so the one-line command is simpler for beginners.</p>
+        </section>
+
+        <section class="card" id="dotnet">
+          <h2>10. Connect RabbitMQ with .NET</h2>
+
+          <h3>Create a console app</h3>
+<pre><code>dotnet new console -n RabbitMqDemo
+cd RabbitMqDemo
+dotnet add package RabbitMQ.Client</code></pre>
+
+          <h3>Producer example</h3>
+<pre><code>using RabbitMQ.Client;
+using System.Text;
+
+var factory = new ConnectionFactory()
+{
+    HostName = "localhost",
+    UserName = "guest",
+    Password = "guest"
+};
+
+await using var connection = await factory.CreateConnectionAsync();
+await using var channel = await connection.CreateChannelAsync();
+
+await channel.QueueDeclareAsync(
+    queue: "testqueue",
+    durable: false,
+    exclusive: false,
+    autoDelete: false,
+    arguments: null);
+
+var message = "Hello from .NET Producer";
+var body = Encoding.UTF8.GetBytes(message);
+
+await channel.BasicPublishAsync(
+    exchange: string.Empty,
+    routingKey: "testqueue",
+    body: body);
+
+Console.WriteLine("Message sent successfully.");</code></pre>
+
+          <h3>Consumer example</h3>
+<pre><code>using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
+using System.Text;
+
+var factory = new ConnectionFactory()
+{
+    HostName = "localhost",
+    UserName = "guest",
+    Password = "guest"
+};
+
+await using var connection = await factory.CreateConnectionAsync();
+await using var channel = await connection.CreateChannelAsync();
+
+await channel.QueueDeclareAsync(
+    queue: "testqueue",
+    durable: false,
+    exclusive: false,
+    autoDelete: false,
+    arguments: null);
+
+var consumer = new AsyncEventingBasicConsumer(channel);
+
+consumer.ReceivedAsync += async (model, ea) =>
+{
+    var body = ea.Body.ToArray();
+    var message = Encoding.UTF8.GetString(body);
+    Console.WriteLine($"Received: {message}");
+    await Task.CompletedTask;
+};
+
+await channel.BasicConsumeAsync(
+    queue: "testqueue",
+    autoAck: true,
+    consumer: consumer);
+
+Console.WriteLine("Waiting for messages...");
+Console.ReadLine();</code></pre>
+
+          <h3>How to test</h3>
+          <ol>
+            <li>Run RabbitMQ container.</li>
+            <li>Run the consumer app first.</li>
+            <li>Run the producer app.</li>
+            <li>Check console output in the consumer app.</li>
+            <li>Also verify queue activity in RabbitMQ Management UI.</li>
+          </ol>
+
+          <div class="note">
+            In a real ASP.NET Core project, the producer can be your Web API and the consumer can be a Worker Service using <code>BackgroundService</code>.
+          </div>
+        </section>
+
+        <section class="card" id="troubleshoot">
+          <h2>11. Troubleshooting</h2>
+
+          <h3>Problem: Docker Desktop not starting</h3>
+          <ul>
+            <li>Check whether WSL 2 is enabled.</li>
+            <li>Restart Docker Desktop.</li>
+            <li>Restart Windows.</li>
+            <li>Verify virtualization is enabled in BIOS.</li>
+          </ul>
+
+          <h3>Problem: RabbitMQ UI not opening</h3>
+          <ul>
+            <li>Check whether the container is running with <code>docker ps</code>.</li>
+            <li>Check logs using <code>docker logs rabbitmq</code>.</li>
+            <li>Confirm port <code>15672</code> is not blocked by another process.</li>
+          </ul>
+
+          <h3>Problem: Application cannot connect to RabbitMQ</h3>
+          <ul>
+            <li>Verify container is running.</li>
+            <li>Check host name is <code>localhost</code>.</li>
+            <li>Check port is <code>5672</code>.</li>
+            <li>Check username/password.</li>
+            <li>Make sure the queue name matches exactly.</li>
+          </ul>
+
+          <h3>Problem: no matching manifest for windows/amd64</h3>
+          <p>Switch Docker Desktop to <strong>Linux containers</strong> and run the RabbitMQ container again.</p>
+        </section>
+
+        <section class="card" id="faq">
+          <h2>12. FAQ</h2>
+
+          <h3>Do I need Erlang when using RabbitMQ in Docker?</h3>
+          <p>No. The Docker image already contains what RabbitMQ needs inside the container.</p>
+
+          <h3>Should I use native RabbitMQ installation or Docker?</h3>
+          <p>For learning and local .NET development, Docker is usually easier. For production and deeper OS-level management, teams may use Linux servers, Kubernetes, or managed environments.</p>
+
+          <h3>Can I use RabbitMQ with ASP.NET Core Web API?</h3>
+          <p>Yes. It is commonly used with Web API, Worker Services, microservices, background processing, and event-driven systems.</p>
+
+          <h3>What should I learn next after basic setup?</h3>
+          <ul>
+            <li>Work Queues</li>
+            <li>Publish/Subscribe</li>
+            <li>Exchange types</li>
+            <li>Dead-letter queues</li>
+            <li>Retry mechanism</li>
+            <li>BackgroundService integration in ASP.NET Core</li>
+          </ul>
+        </section>
+
+        <section class="card" id="refs">
+          <h2>13. References</h2>
+          <ol>
+            <li>Docker Desktop for Windows installation documentation</li>
+            <li>Docker Desktop WSL 2 backend documentation</li>
+            <li>RabbitMQ Windows installation documentation</li>
+            <li>RabbitMQ Management Plugin documentation</li>
+            <li>RabbitMQ .NET tutorial and client API guide</li>
+            <li>RabbitMQ networking and Erlang compatibility documentation</li>
+          </ol>
+          <p class="small">This HTML guide was prepared for learning and local development practice with Docker Desktop, RabbitMQ, and .NET.</p>
+        </section>
+
+        <div class="footer">
+          Prepared as a clean HTML learning note for Docker Desktop + RabbitMQ installation and testing with .NET.
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

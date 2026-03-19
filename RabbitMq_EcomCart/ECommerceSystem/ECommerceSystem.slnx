@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="CartApi/CartApi.csproj" />
+  <Project Path="ECommerceMVC/ECommerceMVC.csproj" />
+  <Project Path="PaymentApi/PaymentApi.csproj" />
+  <Project Path="ProductApi/ProductApi.csproj" />
+  <Project Path="Shared.Models/Shared.Models.csproj" />
+</Solution>

@@ -1,0 +1,30 @@
+<div class="orders-container">
+  <h1>My Orders</h1>
+  
+  <table class="orders-table">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Order Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.id }}</td>
+        <td>{{ order.productName }}</td>
+        <td>{{ order.price | currency }}</td>
+        <td>{{ order.orderDate | date:'mediumDate' }}</td>
+        <td>
+          <span class="status" [class.pending]="order.status === 0" 
+                [class.shipped]="order.status === 1" 
+                [class.delivered]="order.status === 2">
+            {{ order.status | orderStatus }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

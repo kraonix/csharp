@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  color: #111;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.search {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  background: #eef2f7;
+}
+
+.icons span {
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  padding: 0 50px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.hero p {
+  color: #6b7280;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 30px 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.product {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  transition: 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-3px);
+}
+
+/* TOP */
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* TEXT */
+.product h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.price {
+  color: #6366f1;
+  font-weight: 600;
+}
+
+.id {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 5px 0;
+}
+
+/* TAG */
+.tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.blue { background: #e0ecff; color: #2563eb; }
+.pink { background: #ffe4f1; color: #db2777; }
+.green { background: #dcfce7; color: #16a34a; }
+.orange { background: #fff7ed; color: #ea580c; }
+
+/* EMPTY */
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #9ca3af;
+}

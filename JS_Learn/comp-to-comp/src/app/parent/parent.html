@@ -1,0 +1,16 @@
+<div class="parent-container">
+  <h2>Country Selection</h2>
+  
+  <label for="country">Select a Country:</label>
+  <select id="country" (change)="onCountryChange($event)">
+    <option value="">-- Select Country --</option>
+    @for (country of countries(); track country) {
+      <option [value]="country">{{ country }}</option>
+    }
+  </select>
+
+  <p>Selected Country: <strong>{{ selectedCountry() }}</strong></p>
+
+  <!-- Child component to show states -->
+  <app-child [country]="selectedCountry()"></app-child>
+</div>

@@ -1,0 +1,92 @@
+<div class="landing">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">DIR-APP</h2>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#" class="btn">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Build Something Amazing 🚀</h1>
+    <p>Your next-gen web app starts here. Fast. Clean. Powerful.</p>
+
+    <div class="hero-buttons">
+      <button class="primary" (click)="showMessage = true">
+        Get Started
+      </button>
+      <button class="secondary" (click)="showMessage = false">
+        Hide
+      </button>
+    </div>
+
+    <!-- ✅ ngIf example -->
+    <p *ngIf="showMessage" class="welcome">
+      🎉 Welcome to DIR-APP! You're ready to build something crazy.
+    </p>
+
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>⚡ Fast</h3>
+        <p>Optimized performance with modern tech stack.</p>
+      </div>
+      <div class="card">
+        <h3>🎨 Clean UI</h3>
+        <p>Minimal and beautiful design out of the box.</p>
+      </div>
+      <div class="card">
+        <h3>🔒 Secure</h3>
+        <p>Built with security best practices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="employees">
+    <h2>Our Team</h2>
+
+    @for (emp of emps; track emp.id) {
+    <div class="card1">
+      <h3>{{ emp.name }}</h3>
+      <p>{{ emp.position }}</p>
+
+      <!-- 🔥 Switch case example -->
+      @switch (emp.position) {
+
+        @case ('Software Engineer') {
+        <p>👨‍💻 Writes clean and scalable code</p>
+        }
+
+        @case ('Product Manager') {
+        <p>📊 Manages product vision and roadmap</p>
+        }
+
+        @case ('UX Designer') {
+        <p>🎨 Designs beautiful user experiences</p>
+        }
+
+        @default {
+        <p>🧑‍💼 Team Member</p>
+      }
+
+      }
+
+    </div>
+    }
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 DIR-APP. All rights reserved.</p>
+  </footer>
+
+</div>

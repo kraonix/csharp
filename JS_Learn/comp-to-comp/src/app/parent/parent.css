@@ -1,0 +1,32 @@
+.parent-container {
+  padding: 20px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #f8f9fa;
+}
+
+.parent-container h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.parent-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.parent-container select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.parent-container p {
+  margin: 10px 0;
+}

@@ -1,0 +1,13 @@
+<div class="child-container">
+  <h3>States of {{ country() }}</h3>
+  
+  @if (states().length > 0) {
+    <ul>
+      @for (state of states(); track state) {
+        <li>{{ state }}</li>
+      }
+    </ul>
+  } @else {
+    <p>Please select a country to see states.</p>
+  }
+</div>

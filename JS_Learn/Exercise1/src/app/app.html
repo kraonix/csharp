@@ -1,0 +1,63 @@
+<div class="page">
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <h2 class="logo">Nitec</h2>
+
+    <input class="search" placeholder="Search products..." />
+
+    <div class="icons">
+      <span>♡</span>
+      <span>🛒</span>
+      <span>👤</span>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Discover Premium Products</h1>
+      <p>Clean design. Smooth experience.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS (ALWAYS VISIBLE) -->
+  <section class="products">
+
+    @if (products.length === 0) {
+      <p class="empty">No products available</p>
+    }
+
+    @for (p of products; track p.id) {
+      <div class="product">
+
+        <div class="top">
+          <h3>{{ p.name }}</h3>
+          <span class="price">
+            {{ p.price | currency:'INR':'symbol':'1.0-0' }}
+          </span>
+        </div>
+
+        <p class="id">ID: {{ p.id }}</p>
+
+        @switch (p.category) {
+          @case ('Electronics') {
+            <span class="tag blue">Electronics</span>
+          }
+          @case ('Clothing') {
+            <span class="tag pink">Clothing</span>
+          }
+          @case ('Home Decor') {
+            <span class="tag green">Home Decor</span>
+          }
+          @case ('Appliances') {
+            <span class="tag orange">Appliances</span>
+          }
+        }
+
+      </div>
+    }
+
+  </section>
+
+</div>

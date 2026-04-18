@@ -1,0 +1,79 @@
+<div class="container mt-4">
+  <div class="card shadow-sm border-0">
+    <div class="card-body">
+      <h3 class="card-title mb-4">Register New Product</h3>
+
+      <form (ngSubmit)="registerProduct()" #productForm="ngForm" class="row g-3">
+        <div class="col-md-2">
+          <label class="form-label">Product ID</label>
+          <input
+            type="number"
+            class="form-control"
+            name="id"
+            required
+            [(ngModel)]="product.id"
+          />
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Product Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            required
+            [(ngModel)]="product.name"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            name="price"
+            required
+            min="1"
+            [(ngModel)]="product.price"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label">Mfg Date</label>
+          <input
+            type="date"
+            class="form-control"
+            name="mfgDate"
+            required
+            [(ngModel)]="product.mfgDate"
+          />
+        </div>
+
+        <div class="col-md-3">
+          <label class="form-label">Exp Date</label>
+          <input
+            type="date"
+            class="form-control"
+            name="expDate"
+            required
+            [(ngModel)]="product.expDate"
+          />
+        </div>
+
+        <div class="col-12">
+          <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="productForm.invalid"
+          >
+            Add Product
+          </button>
+        </div>
+      </form>
+
+      <div *ngIf="submitted" class="alert alert-success mt-3 mb-0">
+        Product added successfully.
+      </div>
+    </div>
+  </div>
+</div>
